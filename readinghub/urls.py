@@ -8,8 +8,12 @@ urlpatterns = [
     url(r'^book/$', views.book, name='book'),
     url(r'^event/$', views.event, name='event'),
     url(r'^register/$', views.register, name='register'),
-    url(r'^login/$', views.login, name='login'),
-    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^login/$', views.user_login, name='login'),
+    url(r'^logout/$', views.user_logout, name='logout'),
+    url(r'^register_profile/$', views.register_profile, name='register_profile'),
+    url(r'^profile/(?P<username>[\w\-]+)/$', views.profile, name='profile'),
+    url(r'^profiles/$', views.list_profiles, name='list_profiles'),
+
 
 
 ]

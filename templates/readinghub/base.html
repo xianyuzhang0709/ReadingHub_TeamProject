@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load readinghub_template_tags %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -36,13 +37,18 @@
       <a class="navbar-brand" href="#">Reading Hub</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'event' %}">Event</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'book' %}">Book</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">LogIn</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">LogOut</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">SignUP</a></li>
+                {% if user.is_authenticated %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'profile' user.username %}">Profile</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'list_profiles' %}">List Profiles</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'auth_logout' %}?next=/readinghub/">LogOut</a></li>
+                {% else %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'auth_login' %}">LogIn</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'registration_register' %}">SignUP</a></li>
+                {% endif %}
             </ul>
 
             <form class="form-inline mt-2 mt-md-0">

@@ -7,8 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'images/r.jpg' %}">
-
-    <title>ReadingHub</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="jquery/jquery.js"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
@@ -16,17 +19,16 @@
 
     <!-- Custom styles for this template -->
     <link href="https://v4-alpha.getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
-
+     <title>
+       ReadingHub -
       {% block title_block %}
-      {% endblock %}
 
+      {% endblock %}
+    </title>
   </head>
 
 
   <body>
-  {% block body_block %}
-  {% endblock %}
-
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -98,7 +100,7 @@
       </a>
     </div>
 
-
+  {% block body_block %}
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -169,7 +171,7 @@
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-
+  {% endblock %}
 
       <!-- FOOTER -->
       <footer>

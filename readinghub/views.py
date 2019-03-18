@@ -31,12 +31,22 @@ def logout(request):
 
 
 def event(request):
-    response = render(request, 'readinghub/event.html')
+    # Queries the database of a list of all books currently stored.
+    # Order the books by number of likes in descending order
+
+    event_list = Event.objects.all()
+    context_dict = {'events': event_list}
+    response = render(request, 'readinghub/event.html', context_dict)
     return response
 
 
 def book(request):
-    response = render(request, 'readinghub/book.html')
+    # Queries the database of a list of all books currently stored.
+    # Order the books by number of likes in descending order
+
+    book_list = Book.objects.order_by('-likes')[:5]
+    context_dict = {'books': book_list}
+    response = render(request, 'readinghub/book.html', context_dict)
     return response
 
 

@@ -20,7 +20,11 @@
 
     <!-- Custom styles for this template -->
     <link href="https://v4-alpha.getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+<<<<<<< HEAD
     
+=======
+     <link href="https://v4-alpha.getbootstrap.com/examples/album/album.css" rel="stylesheet">
+>>>>>>> 9ceb6790136dc2739a646e3eab6b6ea9da3d7be1
      <title>
        ReadingHub -
       {% block title_block %}
@@ -35,7 +39,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Reading Hub</a>
+      <a class="navbar-brand" href="{% url 'index' %}">Reading Hub</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a></li>
@@ -59,7 +63,7 @@
       </div>
     </nav>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -174,13 +178,15 @@
           <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-      {% endblock %}
+
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
 
-
+      {% endblock %}
       <!-- FOOTER -->
+
+
       <footer>
         <p class="float-right"><a href="#">Back to top</a></p>
         <p>&copy; 2019 IT Group O, ReadingHub &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>

@@ -6,6 +6,7 @@ Home
 {% endblock %}
 
 {% block body_block %}
+<<<<<<< HEAD
 
                     {% if categories %}
 
@@ -32,3 +33,27 @@ Home
 
 {% endblock %}
 
+=======
+        <ul>
+        <div class="row">
+            {% if categories %}
+
+                    {% for category in categories %}
+                        <div class="col-6 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="220" height="220">
+                            </div><br/>
+                          <h2><a href="{% url 'show_category' category.slug %}" >{{ category.name }}</a></h2><br/>
+                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
+                          <p><a class="btn btn-secondary" href="{% url 'show_category' category.slug %}" role="button">View More &raquo;</a></p>
+                        </div><!-- /.col-lg-4 -->
+                    {% endfor %}
+
+            {% else %}
+                <strong>There are no categories present.</strong>
+            {% endif %}
+        </div>
+        </ul>
+
+{% endblock %}
+>>>>>>> 9ceb6790136dc2739a646e3eab6b6ea9da3d7be1

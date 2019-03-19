@@ -51,6 +51,8 @@ def recommend_book(request, category_name_slug):
         if form.is_valid():
             if category:
                 book = form.save(commit=False)
+                if 'image' in request.FILES:
+                    book.image = request.FILES['image']
                 book.category = category
                 book.save()
                 return show_category(request, category_name_slug)

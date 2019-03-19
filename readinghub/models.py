@@ -26,13 +26,12 @@ class Book(models.Model):
     url = models.URLField()
     description = models.TextField(blank=True)
     likes = models.IntegerField(default=0)
-    image = models.ImageField(default=True)
+    image = models.ImageField(upload_to='book_images', blank=True)
 
     # reviews = models.ForeignKey(Reviews)
 
     def __str__(self):
         return self.title
-
 
 class Event(models.Model):
     title = models.CharField(max_length=128, unique=True)

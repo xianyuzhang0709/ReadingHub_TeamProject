@@ -3,7 +3,7 @@ from readinghub.models import Category, Book, Event, UserProfile
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
-from .forms import UserForm, UserProfileForm
+from .forms import UserForm, UserProfileForm, BookForm
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from datetime import datetime
@@ -11,9 +11,54 @@ from django.contrib.auth.models import User
 
 
 def index(request):
-    response = render(request, 'readinghub/index.html')
+    category_list = Category.objects.all()
+    context_dict = {'categories': category_list}
+    response = render(request, 'readinghub/index.html', context_dict)
     return response
 
+def show_category(request, category_name_slug):
+    context_dict = {}
+
+    try:
+        category = Category.objects.get(slug=category_name_slug)
+        books = Book.objects.filter(category=category).order_by('-likes')
+        context_dict['books'] = books
+        context_dict['category'] = category
+    except Category.DoesNotExist:
+        context_dict['books'] = None
+        context_dict['category'] = None
+
+    # context_dict['query'] = category.name
+    # result_list = []
+    # if request.method == 'POST':
+    #     query = request.POST['query'].strip()
+    #     if query:
+    #         result_list = run_query(query)
+    #         context_dict['query'] = query
+    #         context_dict['result_list'] = result_list
+
+    return render(request, 'readinghub/category.html', context_dict)
+
+def recommend_book(request, category_name_slug):
+    try:
+        category = Category.objects.get(slug=category_name_slug)
+    except Category.DoesNotExist:
+        category = None
+
+    form = BookForm()
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            if category:
+                book = form.save(commit=False)
+                book.category = category
+                book.save()
+                return show_category(request, category_name_slug)
+        else:
+            print(form.errors)
+
+    context_dict = {'form': form, 'category': category}
+    return render(request, 'readinghub/recommend_book.html', context_dict)
 
 def about(request):
     response = render(request, 'readinghub/about.html')

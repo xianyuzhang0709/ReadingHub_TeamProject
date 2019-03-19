@@ -1,0 +1,26 @@
+{% extends "readinghub/base.html" %}
+{% block title %}Recommend a new book{% endblock %}
+{% block body_block %}
+    {% if category %}
+        <form role="form" id="book_form" method="post" action="/readinghub/category/{{category.slug}}/recommend_book/">
+            <br />
+            <h2 class="form-signin-heading"> Recommend a book to <a href="/readinghub/category/{{category.slug}}/">{{ category.name }}</a></h2>
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                <strong>{{ field.help_text }}</strong>
+                {{ field }}<br/>
+                 <hr/>
+            {% endfor %}
+            <br/>
+            <button class="btn btn-primary" type="submit" name="submit">
+            Submit
+            </button>
+        </form>
+    {% else %}
+        <p>This is category does not exist.</p>
+    {% endif %}
+{% endblock %}

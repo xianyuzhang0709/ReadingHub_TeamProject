@@ -13,7 +13,7 @@
         {% if books %}
             <ul>
             {% for book in books %}
-                <img src="{{ MEDIA_URL }}lion.jpg" width="300" height="300" alt="{{book.title}}" />
+                <img href= src="{{ MEDIA_URL }}lion.jpg" width="300" height="300" alt="{{book.title}}" />
                 <li>{{ book.title }}
                 {% if book.likes > 1 %}
                 ({{ book.likes }} likes)

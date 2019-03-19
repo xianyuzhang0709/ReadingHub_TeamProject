@@ -12,7 +12,8 @@ from django.contrib.auth.models import User
 
 def index(request):
     category_list = Category.objects.all()
-    context_dict = {'categories': category_list}
+    book_list = Book.objects.all()[:9]
+    context_dict = {'categories': category_list, 'books':book_list}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
 
@@ -28,16 +29,18 @@ def show_category(request, category_name_slug):
         context_dict['books'] = None
         context_dict['category'] = None
 
-    # context_dict['query'] = category.name
-    # result_list = []
-    # if request.method == 'POST':
-    #     query = request.POST['query'].strip()
-    #     if query:
-    #         result_list = run_query(query)
-    #         context_dict['query'] = query
-    #         context_dict['result_list'] = result_list
-
     return render(request, 'readinghub/category.html', context_dict)
+
+def show_book(request):
+    context_dict = {}
+
+    try:
+        booklist = Book.objects.get(Category.objects.all())
+        context_dict['booklist'] = booklist
+    except Category.DoesNotExist:
+        context_dict['booklist'] = None
+
+    return render(request, context_dict)
 
 def recommend_book(request, category_name_slug):
     try:
@@ -61,6 +64,13 @@ def recommend_book(request, category_name_slug):
 
     context_dict = {'form': form, 'category': category}
     return render(request, 'readinghub/recommend_book.html', context_dict)
+
+
+def all_book(request):
+    book_list = Book.objects.all()
+    context_dict = {'books': book_list}
+    response = render(request, 'readinghub/book.html', context_dict)
+    return response
 
 def about(request):
     response = render(request, 'readinghub/about.html')

@@ -6,6 +6,15 @@ Home
 {% endblock %}
 
 {% block body_block %}
+
+    <!-- categories Here! -->
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>Categories</strong></h1><br/>
+        <p class="lead text-muted">Welcome! Here is the all categories, look through, and recommend your loved books!</p><br/>
+      </div>
+    </section>
+
         <ul>
         <div class="row">
             {% if categories %}
@@ -18,7 +27,7 @@ Home
                           <h2><a href="{% url 'show_category' category.slug %}" >{{ category.name }}</a></h2><br/>
                           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
                           <p><a class="btn btn-secondary" href="{% url 'show_category' category.slug %}" role="button">View More &raquo;</a></p>
-                        </div><!-- /.col-lg-4 -->
+                        </div><!-- /.col-lg-4 --><br/>
                     {% endfor %}
 
             {% else %}
@@ -26,5 +35,41 @@ Home
             {% endif %}
         </div>
         </ul>
+        <hr class="featurette-divider">
+
+    <!-- Books Here! -->
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>Books</strong></h1><br/>
+        <p class="lead text-muted">Welcome! Here is the some of books, look through, click to show your like!</p><br/>
+      </div>
+    </section>
+
+        <ul>
+        <div class="row">
+            {% if books %}
+
+                    {% for book in books %}
+                        <div class="col-6 col-md-4 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img data-src="holder.js/100px280/thumb" alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}lion.jpg" data-holder-rendered="true">
+                            </div><br/>
+                          <a href="" >{{ book.title }}</a><br/>
+                          <p>- {{ book.category }} -</p>
+                          <p><{{ book.likes }}> people like it.</p>
+                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
+                          <p><a class="btn btn-secondary" href="" role="button">View More &raquo;</a></p>
+                        </div><!-- /.col-lg-4 -->
+                    {% endfor %}
+
+            {% else %}
+                <strong>There are no books present.</strong>
+            {% endif %}
+        </div>
+        </ul>
+        <hr class="featurette-divider">
+
+
+
 
 {% endblock %}

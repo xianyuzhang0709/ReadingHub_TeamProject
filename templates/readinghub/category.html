@@ -1,41 +1,61 @@
 {% extends 'readinghub/base.html' %}
 {% load staticfiles %}
 
-{% block title %}
+{% block title_block %}
     {{ category.name }}
 {% endblock %}
 
 {% block body_block %}
     <br/>
     {% if category %}
-        <h1>{{ category.name }}
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>{{ category.name }}</strong></h1><br/>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+            {% if user.is_authenticated %}
+                <ul>
+                    <br/>
+                   <a class="btn btn-secondary btn-lg" href="/readinghub/category/{{category.slug}}/recommend_book/" role="button">Recommend a new book</a>
+                </ul>
+            {% endif %}
+        </p>
+      </div>
+    </section>
+
 
         {% if books %}
             <ul>
+            <div class="row">
             {% for book in books %}
-                <img href= src="{{ MEDIA_URL }}lion.jpg" width="300" height="300" alt="{{book.title}}" />
-                <li>{{ book.title }}
-                {% if book.likes > 1 %}
-                ({{ book.likes }} likes)
-                {% elif book.likes == 1 %}
-                ({{ book.likes }} like)
-                {% endif %}
-                </li>
+
+                <div class="col-6 col-md-4">
+                    <img data-src="holder.js/100px280/thumb" alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}lion.jpg" data-holder-rendered="true">
+                    <p>
+                        <div class="text-center">
+                        <a href="{{ book.url }}">{{ book.title }}</a><br/>
+                        <br/>
+                        <span class="badge badge-pill badge-default" id="like_count">{{ book.likes }}
+                            {% if book.likes > 1 %}
+                                likes
+                            {% elif book.likes == 1 %}
+                                like
+                            {% endif %}
+                        </span>
+                        </div>
+                    </p>
+                </div>
+
             {% endfor %}
+            </div>
             </ul>
         {% else %}
         <strong>No books currently in category.</strong>
             <br/><br/>
         {% endif %}
 
-            {% if user.is_authenticated %}
-                <ul>
-                   <a class="btn btn-primary" href="/readinghub/category/{{category.slug}}/recommend_book/" role="button">Recommend a new book</a>
-                </ul>
-            {% endif %}
 
     {% else %}
         The specified category does not exist!
     {% endif %}
-
 {% endblock %}

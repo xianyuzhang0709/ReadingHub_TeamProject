@@ -6,6 +6,7 @@ Home
 {% endblock %}
 
 {% block body_block %}
+<<<<<<< HEAD
 
     <!-- categories Here! -->
     <section class="card-block text-center">
@@ -15,6 +16,36 @@ Home
       </div>
     </section>
 
+=======
+<<<<<<< HEAD
+
+                    {% if categories %}
+
+                       
+                            {% for category in categories %}
+<div class="container marketing">
+        
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+                                <div class="col-lg-4">
+                                  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                                  <p>{{ category.name }}</p>
+                                  <p>{{ category.name }}222</p>
+                                  <p><a class="btn btn-secondary" href="{% url 'show_category' category.slug %}" role="button">View More &raquo;</a></p>
+                                </div>
+    </div>
+</div>
+                            {% endfor %}
+                        
+                    {% else %}
+                        <strong>There are no categories present.</strong>
+                    {% endif %}
+
+
+{% endblock %}
+
+=======
+>>>>>>> ce491a63377a826aeb8ade49eb352d7b1fe104c4
         <ul>
         <div class="row">
             {% if categories %}
@@ -73,3 +104,4 @@ Home
 
 
 {% endblock %}
+>>>>>>> 9ceb6790136dc2739a646e3eab6b6ea9da3d7be1

@@ -1,12 +1,17 @@
 {% extends 'readinghub/base.html' %}
 {% load staticfiles %}
+<<<<<<< HEAD
+
+{% block title %}User Profiles{% endblock %}
+=======
 {% block title_block %}
 Profile list
 {% endblock %}
+>>>>>>> 9ceb6790136dc2739a646e3eab6b6ea9da3d7be1
 
 {% block body_block %}
     <br/>
-<h1>User Profiles</h1>
+<font size="4">User Profiles</font>
 
 <div class="panel">
 {% if userprofile_list %}
@@ -16,12 +21,17 @@ Profile list
             <div class="list-group">
             {% for listuser in userprofile_list %}
             <div class="list-group-item">
-                <h5 class="list-group-item-heading">
-                    <span style="font-size: 28px;">⛄</span>
+
+                <div style="width: 80px; height: 80px; float:left; border-radius: 50%; border: 2px solid #eee; overflow: hidden;" >
+                      <img src="{{ MEDIA_URL }}{{ listuser.user.userprofile.picture }}" width="100" height="100" alt="{{selecteduser.username}}" />
+                </div>
+                    <div>&nbsp &nbsp &nbsp</div> 
                     <a href="{% url 'profile' listuser.user.username %}">{{ listuser.user.username }}</a>
-                    <td>💩</td>
-                </h5>
+                    <div>&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</div> 
+               <font color="#397EAC"> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{listuser.user.userprofile.description}}</p><?font>    
+               
             </div>
+
             {% endfor %}
             </div>
         </div>

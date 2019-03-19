@@ -2,111 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533e2ff4-a396-45ac-841e-20f59a9510d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ReadingHub_TeamProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/ER2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/ER2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/sitemap4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/sitemap4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/wireframe/ReadingHubWireframe.bmpr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/wireframe/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/wireframe/event.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ER_Site_Wireframe/wireframe/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadingHub_TeamProject/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadingHub_TeamProject/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadingHub_TeamProject/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadingHub_TeamProject/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Glory.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/HarryPotter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/book_images/read-books-800.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/feminism.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/lion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/love.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_images/Rain-Generic-Photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_images/read-books-800.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_images/read-books-800_tkGhOLf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_images/timg_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/wu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/xianyu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/xu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/populate_readinghub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/migrations/0002_auto_20190316_1318.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/migrations/0003_auto_20190319_2047.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/templatetags/readinghub_template_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readinghub/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/HarryPotter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/e8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/eee4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/eee5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/eee6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/eee7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/eee8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/feminism.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/love.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/r.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/rango-ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/rango-jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/cats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/css/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/list_profiles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/profile_registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/recommend_book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/readinghub/show_each_book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registration_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readinghub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readinghub/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/readinghub/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/readinghub/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/readinghub/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/readinghub/list_profiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/list_profiles.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,18 +33,6 @@
               <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readinghub/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,14 +68,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/readinghub/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+            <state relative-caret-position="408">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
               <folding>
-                <element signature="e#772#860#0#HTML" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="e#2521#2528#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#1;n#!!top" expanded="true" />
+                <element signature="e#4050#4057#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/list_profiles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -212,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="153" column="37" lean-forward="true" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="37" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -244,6 +142,7 @@
       <find>text-center</find>
       <find>center</find>
       <find>STEp</find>
+      <find>9ceb6790136dc2739a646e3eab6b6ea9da3d7be1</find>
     </findStrings>
     <replaceStrings>
       <replace>book</replace>
@@ -273,16 +172,16 @@
         <option value="$PROJECT_DIR$/templates/category.html" />
         <option value="$PROJECT_DIR$/populate_readinghub.py" />
         <option value="$PROJECT_DIR$/templates/readinghub/profile.html" />
-        <option value="$PROJECT_DIR$/templates/readinghub/list_profiles.html" />
         <option value="$PROJECT_DIR$/readinghub/models.py" />
         <option value="$PROJECT_DIR$/templates/readinghub/recommend_book.html" />
         <option value="$PROJECT_DIR$/readinghub/forms.py" />
         <option value="$PROJECT_DIR$/templates/readinghub/category.html" />
-        <option value="$PROJECT_DIR$/templates/readinghub/base.html" />
         <option value="$PROJECT_DIR$/readinghub/urls.py" />
         <option value="$PROJECT_DIR$/readinghub/views.py" />
-        <option value="$PROJECT_DIR$/templates/readinghub/index.html" />
         <option value="$PROJECT_DIR$/templates/readinghub/book.html" />
+        <option value="$PROJECT_DIR$/templates/readinghub/index.html" />
+        <option value="$PROJECT_DIR$/templates/readinghub/list_profiles.html" />
+        <option value="$PROJECT_DIR$/templates/readinghub/base.html" />
       </list>
     </option>
   </component>
@@ -409,12 +308,12 @@
       <workItem from="1552335986309" duration="5760000" />
       <workItem from="1552930659656" duration="3473000" />
       <workItem from="1553017078204" duration="153000" />
-      <workItem from="1553017798047" duration="19560000" />
+      <workItem from="1553017798047" duration="19875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36682000" />
+    <option name="totallyTimeSpent" value="36997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -535,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/readinghub/list_profiles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readinghub/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -624,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="153" column="37" lean-forward="true" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readinghub/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -657,11 +542,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/readinghub/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+        <state relative-caret-position="408">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding>
-            <element signature="e#772#860#0#HTML" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="e#2521#2528#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#1;n#!!top" expanded="true" />
+            <element signature="e#4050#4057#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/list_profiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

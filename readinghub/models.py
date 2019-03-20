@@ -27,8 +27,16 @@ class Book(models.Model):
     description = models.TextField(blank=True)
     likes = models.IntegerField(default=0)
     image = models.ImageField(default='lion.jpg', upload_to='book_images', blank=True)
+    slug = models.SlugField(unique=True)
 
     # reviews = models.ForeignKey(Reviews)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Book, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'Books'
 
     def __str__(self):
         return self.title

@@ -25,22 +25,29 @@ def show_category(request, category_name_slug):
         books = Book.objects.filter(category=category).order_by('-likes')
         context_dict['books'] = books
         context_dict['category'] = category
+        context_dict['category_name_slug'] = category_name_slug
     except Category.DoesNotExist:
         context_dict['books'] = None
         context_dict['category'] = None
 
     return render(request, 'readinghub/category.html', context_dict)
 
-def show_book(request):
+def show_book(request, category_name_slug, book_name_slug):
     context_dict = {}
 
     try:
-        booklist = Book.objects.get(Category.objects.all())
-        context_dict['booklist'] = booklist
-    except Category.DoesNotExist:
-        context_dict['booklist'] = None
+        category = Category.objects.get(slug=category_name_slug)
+        book = Book.objects.get(slug=book_name_slug)
+        context_dict['book'] = book
+        context_dict['category'] = category
+        context_dict['category_name_slug'] = category_name_slug
+        context_dict['book_name_slug'] = book_name_slug
+    except Category.DoesNotExist or Book.DoesNotExist:
+        context_dict['category'] = None
+        context_dict['book'] = None
 
-    return render(request, context_dict)
+    return render(request,'readinghub/show_book.html', context_dict)
+
 
 def recommend_book(request, category_name_slug):
     try:

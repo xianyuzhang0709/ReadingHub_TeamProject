@@ -25,15 +25,16 @@
 
 
         {% if books %}
+
             <ul>
             <div class="row">
             {% for book in books %}
 
                 <div class="col-6 col-md-4">
-                    <img data-src="holder.js/100px280/thumb" alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}lion.jpg" data-holder-rendered="true">
+                    <img alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}lion.jpg" data-holder-rendered="true">
                     <p>
                         <div class="text-center">
-                        <a href="{{ book.url }}">{{ book.title }}</a><br/>
+                        <a href="{% url 'show_book' category_name_slug book.slug %}">{{ book.title }}</a><br/>
                         <br/>
                         <span class="badge badge-pill badge-default" id="like_count">{{ book.likes }}
                             {% if book.likes > 1 %}

@@ -9,6 +9,7 @@ class BookForm(forms.ModelForm):
     likes = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     description = forms.CharField(widget=forms.Textarea, help_text="Please description this book.")
     image = forms.ImageField(required=False, help_text="Upload a picture of the book.")
+    slug = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     def clean(self):
         cleaned_data = self.cleaned_data

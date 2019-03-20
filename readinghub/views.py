@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 
 def index(request):
     category_list = Category.objects.all()
-    book_list = Book.objects.all()[:9]
+    book_list = Book.objects.order_by('-likes')[:9]
     context_dict = {'categories': category_list, 'books':book_list}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
@@ -63,11 +63,12 @@ def recommend_book(request, category_name_slug):
         form = BookForm(request.POST)
         if form.is_valid():
             if category:
-                book = form.save(commit=False)
+                newbook = form.save(commit=False)
+                newbook.category = category
                 if 'image' in request.FILES:
-                    book.image = request.FILES['image']
-                book.category = category
-                book.save()
+                    newbook.image = request.FILES['image']
+
+                newbook.save()
             return show_category(request, category_name_slug)
         else:
             print(form.errors)
@@ -77,7 +78,7 @@ def recommend_book(request, category_name_slug):
 
 
 def all_book(request):
-    book_list = Book.objects.all()
+    book_list = Book.objects.order_by('-likes')
     context_dict = {'books': book_list}
     response = render(request, 'readinghub/book.html', context_dict)
     return response

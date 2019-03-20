@@ -26,7 +26,7 @@
                 {% csrf_token %}
                 {{ form.as_p }}
             </div>
-            <button type="submit" value="Update" class="btn btn-primary">Update</button>
+            <button type="submit" value="Update" class="btn btn-outline-primary">Update</button>
             </form>
         {% else %}
            <p><strong>Description:</strong> {{userprofile.description}}</p>

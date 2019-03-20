@@ -20,16 +20,13 @@ Home
             {% if categories %}
 
                     {% for category in categories %}
-                        <div class="col-6 text-center" ><br/>
+                        <div class="col-6 col-md-3 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img class="rounded-circle" src="{{ MEDIA_URL }}xianyu.jpg" alt="Generic placeholder image" width="220" height="220">
-                            </div><br/>
-                          <h2><a href="{% url 'show_category' category.slug %}" >{{ category.name }}</a></h2><br/>
-                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
-                          <p><a class="btn btn-secondary" href="{% url 'show_category' category.slug %}" role="button">View More &raquo;</a></p>
+                              <img class="rounded-circle" src="{{ MEDIA_URL }}love.jpg" alt="Generic placeholder image" width="220" height="220">
+                            </div><br/><br/>
+                            <a href="{% url 'show_category' category.slug %}" class="btn btn-outline-primary" role="button" aria-pressed="true" >{{ category.name }}</a>
                         </div><!-- /.col-lg-4 --><br/>
                     {% endfor %}
-
             {% else %}
                 <strong>There are no categories present.</strong>
             {% endif %}
@@ -41,7 +38,7 @@ Home
     <section class="card-block text-center">
       <div class="container">
         <h1 class="jumbotron-heading"><strong>Books</strong></h1><br/>
-        <p class="lead text-muted">Welcome! Here is the some of books, look through, click to show your like!</p><br/>
+        <p class="lead text-muted">Welcome! Here is the some of books, click the title of the books to see more details!</p><br/>
       </div>
     </section>
 
@@ -52,13 +49,33 @@ Home
                     {% for book in books %}
                         <div class="col-6 col-md-4 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img alt="{{book.title}}" width="255" height="380" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
+                              <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
                             </div><br/>
-                          <a href="" >{{ book.title }}</a><br/>
-                          <p>- {{ book.category }} -</p>
-                          <p><{{ book.likes }}> people like it.</p>
-                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
-                          <p><a class="btn btn-secondary" href="" role="button">View More &raquo;</a></p>
+                          <a href="{% url 'show_book' book.category.slug book.slug %}">{{ book.title }}</a><br/>
+                            <p><h6>Category: {{ book.category }} </h6></p>
+                            <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ book.likes }}</span></h6></p>
+
+
+                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="text-center"><br/>
+                                            <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
+                                             <br/><br/>
+                                            <a href="{% url 'show_book' book.category.slug book.slug %}"><h5>{{ book.title }}</h5></a>
+                                        </div>
+                                        <div class="modal-body" style="text-align:justify; text-justify:inter-ideograph;">
+                                            {{ book.description }}<br/>
+
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button><br/><br/>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
                         </div><!-- /.col-lg-4 -->
                     {% endfor %}
 

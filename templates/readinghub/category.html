@@ -16,7 +16,7 @@
             {% if user.is_authenticated %}
                 <ul>
                     <br/>
-                   <a class="btn btn-secondary btn-lg" href="/readinghub/category/{{category.slug}}/recommend_book/" role="button">Recommend a new book</a>
+                   <a class="btn btn-outline-primary btn-lg" href="/readinghub/category/{{category.slug}}/recommend_book/" role="button">Recommend a new book</a>
                 </ul>
             {% endif %}
         </p>
@@ -29,25 +29,37 @@
             <ul>
             <div class="row">
             {% for book in books %}
+                        <div class="col-6 col-md-4 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
+                            </div><br/>
+                          <a href="{% url 'show_book' book.category.slug book.slug %}">{{ book.title }}</a><br/>
+                            <p><h6>Category: {{ book.category }} </h6></p>
+                            <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ book.likes }}</span></h6></p>
 
-                <div class="col-6 col-md-4">
-                    <img alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
-                    <p>
-                        <div class="text-center">
-                        <a href="{% url 'show_book' category_name_slug book.slug %}">{{ book.title }}</a><br/>
-                        <br/>
-                        <span class="badge badge-pill badge-default" id="like_count">{{ book.likes }}
-                            {% if book.likes > 1 %}
-                                likes
-                            {% elif book.likes == 1 %}
-                                like
-                            {% endif %}
-                        </span>
-                        </div>
-                    </p>
-                </div>
 
-            {% endfor %}
+                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="text-center"><br/>
+                                            <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
+                                             <br/><br/>
+                                            <a href="{% url 'show_book' book.category.slug book.slug %}"><h5>{{ book.title }}</h5></a>
+                                        </div>
+                                        <div class="modal-body" style="text-align:justify; text-justify:inter-ideograph;">
+                                            {{ book.description }}<br/>
+
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button><br/><br/>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                        </div><!-- /.col-lg-4 -->
+                    {% endfor %}
             </div>
             </ul>
         {% else %}

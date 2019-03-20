@@ -35,6 +35,7 @@ class Book(models.Model):
         self.slug = slugify(self.title)
         super(Book, self).save(*args, **kwargs)
 
+
     class Meta:
         verbose_name_plural = 'Books'
 

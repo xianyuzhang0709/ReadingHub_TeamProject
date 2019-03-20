@@ -25,7 +25,7 @@ Profile list
                             </div><br/>
                           <h2><a href="{% url 'profile' listuser.user.username %}">{{ listuser.user.username }}</a></h2>
                           <p>{{ listuser.user.userprofile.description }}</p>
-                          <p><a class="btn btn-secondary" href="{% url 'profile' listuser.user.username %}" role="button">Details &raquo;</a></p>
+                          <p><a class="btn btn-outline-primary" href="{% url 'profile' listuser.user.username %}" role="button">Details &raquo;</a></p>
                         </div><!-- /.col-lg-4 --><br/>
                     {% endfor %}
 

@@ -5,6 +5,7 @@
         <form role="form" id="book_form" method="post" action="/readinghub/category/{{category.slug}}/recommend_book/"  enctype="multipart/form-data">
             <br />
             <h2 class="form-signin-heading"> Recommend a book to <a href="/readinghub/category/{{category.slug}}/">{{ category.name }}</a></h2>
+
             {% csrf_token %}
             {% for hidden in form.hidden_fields %}
                 {{ hidden }}
@@ -20,8 +21,6 @@
             Submit
             </button>
         </form>
-
-
 
     {% else %}
         <p>This is category does not exist.</p>

@@ -7,21 +7,34 @@
 
 {% block body_block %}
 <br/>
-<h1>{{selecteduser.username}}'s Profile</h1>
-    <img src="{{ MEDIA_URL }}{{userprofile.picture }}" width="300" height="300" alt="{{selecteduser.username}}" />
-    <br/>
-    <br/>
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>{{selecteduser.username}}</strong></h1><br/>
+        <p class="lead text-muted">Hey! This is your profile, show more about yourself!</p><br/>
+      </div>
+    </section>
+
     <div>
+    <img class="rounded mx-auto d-block" src="{{ MEDIA_URL }}{{userprofile.picture }}" width="300" height="300" alt="{{selecteduser.username}}" />
+    <br/>
+
+    <section class="card-block text-center">
+    <div class="align-self-center">
         {% if selecteduser.username == user.username %}
             <form method="post" action="." enctype="multipart/form-data">
+            <div class="form-group">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" value="Update" class="btn btn-primary">Update</button>
+            </div>
+            <button type="submit" value="Update" class="btn btn-primary">Update</button>
             </form>
         {% else %}
            <p><strong>Description:</strong> {{userprofile.description}}</p>
         {% endif %}
     </div>
+    </section>
+    </div>
+
 
 <div id="edit_profile"></div>
 

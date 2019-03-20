@@ -7,34 +7,35 @@ Profile list
 
 
 {% block body_block %}
-    <br/>
-<font size="4">User Profiles</font>
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>Your potential friends!</strong></h1><br/>
+        <p class="lead text-muted">Hey! Just look through, and make friends with any of them or all!</p><br/>
+      </div>
+    </section>
 
-<div class="panel">
-{% if userprofile_list %}
-    <div class="panel-heading">
+    <ul>
+        <div class="row">
+            {% if userprofile_list %}
 
-        <div class="panel-body">
-            <div class="list-group">
-            {% for listuser in userprofile_list %}
-            <div class="list-group-item">
+                    {% for listuser in userprofile_list %}
+                        <div class="col-6 col-md-4 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img class="rounded-circle" src="{{ MEDIA_URL }}{{ listuser.user.userprofile.picture }}" alt="{{selecteduser.username}}" width="220" height="220">
+                            </div><br/>
+                          <h2><a href="{% url 'profile' listuser.user.username %}">{{ listuser.user.username }}</a></h2>
+                          <p>{{ listuser.user.userprofile.description }}</p>
+                          <p><a class="btn btn-secondary" href="{% url 'profile' listuser.user.username %}" role="button">Details &raquo;</a></p>
+                        </div><!-- /.col-lg-4 --><br/>
+                    {% endfor %}
 
-                <div style="width: 80px; height: 80px; float:left; border-radius: 50%; border: 2px solid #eee; overflow: hidden;" >
-                      <img src="{{ MEDIA_URL }}{{ listuser.user.userprofile.picture }}" width="100" height="100" alt="{{selecteduser.username}}" />
-                </div>
-                    <div>&nbsp &nbsp &nbsp</div> 
-                    <a href="{% url 'profile' listuser.user.username %}">{{ listuser.user.username }}</a>
-                    <div>&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</div> 
-               <font color="#397EAC"> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{listuser.user.userprofile.description}}</p><?font>    
-               
-            </div>
-
-            {% endfor %}
-            </div>
+            {% else %}
+                <strong>There are no categories present.</strong>
+            {% endif %}
         </div>
-    </div>
-{% else %}
-<p>There are no users for the site.</p>
-{% endif %}
-</div>
+    </ul>
+
+
+
 {% endblock %}
+

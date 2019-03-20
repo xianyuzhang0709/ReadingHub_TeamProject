@@ -76,6 +76,9 @@ def about(request):
     response = render(request, 'readinghub/about.html')
     return response
 
+def show_each_book(request):
+    response = render(request, 'readinghub/show_each_book.html')
+    return response
 
 def register(request):
     registered = False

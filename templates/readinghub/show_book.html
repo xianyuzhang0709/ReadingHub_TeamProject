@@ -14,7 +14,7 @@
      <table>
     <tr>
     <td>
-     <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"> <img src="{{ MEDIA_URL }}lion.jpg" width="300" height="400" alt=""> </div>
+     <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"> <img src="{{ MEDIA_URL }}{{ book.image }}" width="300" height="400" alt=""> </div>
     </td>
      <td>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,10 +39,18 @@
                       <span class="pro-title"> <strong>URL：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span> <span class="pro-detail"><a href = "{{ book.url }}">{{ book.title }}</a></span>
                   </p>
                   <p class="admin-profile">
-                  <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span class="pro-detail">{{ book.likes }}</span>
-                </p>
+                  <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span id="like_count" class="badge badge-danger">{{ book.likes }}</span>
+                  </p>
               </div>
-              <a href="#" class="btn btn-primary"><i class="icon-speech"></i> Like! </a>
+
+              <div>
+                {% if user.is_authenticated %}
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="likes" data-boookid="{{book.id}}" class="btn btn-danger" type="button">Like it!</button></span>
+
+
+                {% endif %}
+              </div>
+
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ Home
                     {% for category in categories %}
                         <div class="col-6 col-md-3 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img class="rounded-circle" src="{{ MEDIA_URL }}love.jpg" alt="Generic placeholder image" width="220" height="220">
+                              <img class="rounded-circle" src="{{ MEDIA_URL }}{{ category.image }}" alt="Generic placeholder image" width="220" height="220">
                             </div><br/><br/>
                             <a href="{% url 'show_category' category.slug %}" class="btn btn-outline-primary" role="button" aria-pressed="true" >{{ category.name }}</a>
                         </div><!-- /.col-lg-4 --><br/>

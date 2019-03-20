@@ -91,6 +91,20 @@ def show_each_book(request):
     response = render(request, 'readinghub/show_each_book.html')
     return response
 
+@login_required
+def like_book(request):
+    bookid = None
+    if request.method == 'GET':
+        bookid = request.GET['book_id']
+        likes = 0
+        if bookid:
+            boook = Book.objects.get(id=int(bookid))
+            if boook:
+                likes = boook.likes + 1
+                boook.likes = likes
+                boook.save()
+    return HttpResponse(likes)
+
 def register(request):
     registered = False
     if request.method == 'POST':

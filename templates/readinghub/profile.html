@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body_block %}
-<br/>
+<br/><div style="background-image: url({% static 'images/12.png' %});background-size:100% 100%;">
     <section class="card-block text-center">
       <div class="container">
         <h1 class="jumbotron-heading"><strong>{{selecteduser.username}}</strong></h1><br/>
@@ -15,7 +15,7 @@
     </section>
 
     <div>
-    <img class="rounded mx-auto d-block" src="{{ MEDIA_URL }}{{userprofile.picture }}" width="300" height="300" alt="{{selecteduser.username}}" />
+    <img class="rounded mx-auto d-block rounded-circle" src="{{ MEDIA_URL }}{{userprofile.picture }}" width="300" height="300" alt="{{selecteduser.username}}" />
     <br/>
 
     <section class="card-block text-center">
@@ -34,6 +34,7 @@
     </div>
     </section>
     </div>
+</div>
 
 
 <div id="edit_profile"></div>

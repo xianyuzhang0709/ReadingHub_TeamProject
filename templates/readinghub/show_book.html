@@ -1,8 +1,9 @@
 {% extends 'readinghub/base.html' %}
 {% load staticfiles %}
-{% block title %}
-    <strong>{{ Book.tittle }}</strong>
+{% block title_block %}
+{{ book.title }}
 {% endblock %}
+
 {% block body_block %}
      <table>
     <tr>
@@ -15,12 +16,12 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s"><br/>
-            <h3><strong>Book name</strong></h3>
+            <h3><strong>{{ book.title }}</strong></h3>
                 <p>Description:</p>
-              <p>Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.</p>
+              <p>{{ book.description }}</p>
               <div class="about-profile">
-                <ul class="admin-profile">
-                    <li><span class="pro-title"> Author </span> <span class="pro-detail">BOOKAUTHOR</span></li>
+                <ul class="">
+                    <li><span class="pro-title"> Author: </span> <span class="pro-detail">{{ book.author }}</span></li>
                 </ul>
                   <ul class="admin-profile">
                   <li><span class="pro-title"> URL </span> <span class="pro-detail">BOOKURL</span></li>

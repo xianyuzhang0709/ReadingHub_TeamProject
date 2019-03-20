@@ -22,7 +22,7 @@ Home
                     {% for category in categories %}
                         <div class="col-6 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="220" height="220">
+                              <img class="rounded-circle" src="{{ MEDIA_URL }}xianyu.jpg" alt="Generic placeholder image" width="220" height="220">
                             </div><br/>
                           <h2><a href="{% url 'show_category' category.slug %}" >{{ category.name }}</a></h2><br/>
                           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
@@ -52,7 +52,7 @@ Home
                     {% for book in books %}
                         <div class="col-6 col-md-4 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img data-src="holder.js/100px280/thumb" alt="{{book.title}}" style="height: 280px; width: 100%; display: block;" src="{{ MEDIA_URL }}lion.jpg" data-holder-rendered="true">
+                              <img alt="{{book.title}}" width="255" height="380" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
                             </div><br/>
                           <a href="" >{{ book.title }}</a><br/>
                           <p>- {{ book.category }} -</p>

@@ -29,6 +29,7 @@ def show_category(request, category_name_slug):
     except Category.DoesNotExist:
         context_dict['books'] = None
         context_dict['category'] = None
+        context_dict['category_name_slug'] = None
 
     return render(request, 'readinghub/category.html', context_dict)
 
@@ -45,6 +46,8 @@ def show_book(request, category_name_slug, book_name_slug):
     except Category.DoesNotExist or Book.DoesNotExist:
         context_dict['category'] = None
         context_dict['book'] = None
+        context_dict['category_name_slug'] = None
+        context_dict['book_name_slug'] = None
 
     return render(request,'readinghub/show_book.html', context_dict)
 
@@ -65,7 +68,7 @@ def recommend_book(request, category_name_slug):
                     book.image = request.FILES['image']
                 book.category = category
                 book.save()
-                return show_category(request, category_name_slug)
+            return show_category(request, category_name_slug)
         else:
             print(form.errors)
 

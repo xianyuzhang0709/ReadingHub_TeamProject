@@ -26,7 +26,7 @@ class Book(models.Model):
     url = models.URLField()
     description = models.TextField(blank=True)
     likes = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='book_images', blank=True)
+    image = models.ImageField(default='lion.jpg', upload_to='book_images', blank=True)
 
     # reviews = models.ForeignKey(Reviews)
 
@@ -41,7 +41,7 @@ class Event(models.Model):
     book = models.ForeignKey("Book", blank=True, null=True, on_delete=models.CASCADE)
     participators = models.IntegerField(default=0, blank=True)
     description = models.TextField(blank=True)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(default='lion.jpg', blank=True)
 
     def __str__(self):
         return self.title
@@ -53,7 +53,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
 
     # The additional attributes we wish to include.
-    picture = models.ImageField(upload_to='profile_images', blank=True)
+    picture = models.ImageField(default='lion.jpg', upload_to='profile_images', blank=True)
     description = models.TextField(blank=True)
 
     # Override the __unicode__() method to return out something meaningful!

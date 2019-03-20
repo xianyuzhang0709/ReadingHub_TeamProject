@@ -3,14 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="533e2ff4-a396-45ac-841e-20f59a9510d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/gallery/img-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/line-icons/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/line-icons/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/line-icons/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/line-icons/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/line-icons/Simple-Line-Icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/readinghub/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/base.html" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readinghub/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readinghub/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readinghub/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/models.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/readinghub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readinghub/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/readinghub/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/readinghub/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/readinghub/show_each_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/show_book.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/templates/readinghub/list_profiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/list_profiles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/readinghub/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/readinghub/profile.html" afterDir="false" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +55,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/readinghub/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+=======
         <entry file="file://$PROJECT_DIR$/readinghub/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -35,8 +78,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/populate_readinghub.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="137">
               <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+=======
+            <state relative-caret-position="578">
+              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
             </state>
           </provider>
         </entry>
@@ -44,38 +93,98 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readinghub/admin.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="221">
               <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="443">
+              <caret line="60" column="96" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="96" />
+=======
+            <state relative-caret-position="643">
+              <caret line="133" column="10" selection-start-line="133" selection-end-line="133" selection-end-column="10" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/readinghub/urls.py">
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/book.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="15" column="164" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="164" />
+=======
+        <entry file="file://$PROJECT_DIR$/readinghub/models.py">
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/templates/readinghub/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
               <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3094">
+              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+=======
+        <entry file="file://$PROJECT_DIR$/readinghub/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/readinghub/models.py">
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/static/js/bootstrap.bundle.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/show_each_book.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2056">
+              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+              <folding>
+                <element signature="e#19333#19378#0#HTML" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/list_profiles.html">
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
@@ -110,17 +219,48 @@
             <state relative-caret-position="253">
               <caret line="23" column="63" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="63" />
               <folding>
+<<<<<<< HEAD
                 <element signature="e#0#50#0" expanded="true" />
+=======
+                <element signature="e#1360#1367#0#HTML" expanded="true" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/templates/readinghub/show_book.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <folding>
+                <element signature="e#656#697#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+=======
+        <entry file="file://$PROJECT_DIR$/templates/readinghub/book.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
             </state>
           </provider>
         </entry>
@@ -149,11 +289,19 @@
       <find>center</find>
       <find>STEp</find>
       <find>9ceb6790136dc2739a646e3eab6b6ea9da3d7be1</find>
+<<<<<<< HEAD
+      <find>assets/img</find>
+      <find>assets</find>
+=======
       <find>upload</find>
+<<<<<<< HEAD
       <find>Categories</find>
       <find>book_name_slug</find>
       <find>slug</find>
       <find>category_name_slug</find>
+=======
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
     </findStrings>
     <replaceStrings>
       <replace>book</replace>
@@ -178,21 +326,41 @@
         <option value="$PROJECT_DIR$/templates/readinghub/login.html" />
         <option value="$PROJECT_DIR$/static/js/rango-ajax.js" />
         <option value="$PROJECT_DIR$/ReadingHub_TeamProject/urls.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/ReadingHub_TeamProject/settings.py" />
         <option value="$PROJECT_DIR$/templates/category.html" />
         <option value="$PROJECT_DIR$/populate_readinghub.py" />
         <option value="$PROJECT_DIR$/templates/readinghub/recommend_book.html" />
+=======
+        <option value="$PROJECT_DIR$/readinghub/admin.py" />
+        <option value="$PROJECT_DIR$/templates/category.html" />
+        <option value="$PROJECT_DIR$/populate_readinghub.py" />
+        <option value="$PROJECT_DIR$/templates/readinghub/recommend_book.html" />
+        <option value="$PROJECT_DIR$/readinghub/forms.py" />
+        <option value="$PROJECT_DIR$/templates/readinghub/category.html" />
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
         <option value="$PROJECT_DIR$/templates/readinghub/book.html" />
         <option value="$PROJECT_DIR$/templates/readinghub/base.html" />
         <option value="$PROJECT_DIR$/templates/readinghub/index.html" />
         <option value="$PROJECT_DIR$/templates/readinghub/list_profiles.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/readinghub/urls.py" />
+        <option value="$PROJECT_DIR$/readinghub/views.py" />
+        <option value="$PROJECT_DIR$/ReadingHub_TeamProject/settings.py" />
+        <option value="$PROJECT_DIR$/templates/readinghub/show_each_book.html" />
+        <option value="$PROJECT_DIR$/templates/readinghub/base.html" />
+=======
         <option value="$PROJECT_DIR$/templates/readinghub/profile.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/readinghub/urls.py" />
         <option value="$PROJECT_DIR$/readinghub/forms.py" />
         <option value="$PROJECT_DIR$/readinghub/admin.py" />
         <option value="$PROJECT_DIR$/readinghub/models.py" />
         <option value="$PROJECT_DIR$/readinghub/views.py" />
         <option value="$PROJECT_DIR$/templates/readinghub/category.html" />
+=======
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
       </list>
     </option>
   </component>
@@ -207,7 +375,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,6 +385,8 @@
             <path>
               <item name="ReadingHub_TeamProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="ReadingHub_TeamProject" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -233,6 +402,7 @@
             <path>
               <item name="ReadingHub_TeamProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="ReadingHub_TeamProject" type="462c0819:PsiDirectoryNode" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -241,16 +411,11 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="readinghub" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ReadingHub_TeamProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReadingHub_TeamProject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,6 +424,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\ReadingHub_TeamProject\static" />
+      <recent name="G:\ReadingHub_TeamProject\static\css" />
+      <recent name="G:\ReadingHub_TeamProject\media" />
+      <recent name="G:\ReadingHub_TeamProject\static\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\ReadingHub_TeamProject\templates\readinghub" />
     </key>
@@ -313,18 +484,35 @@
       <workItem from="1552335986309" duration="5760000" />
       <workItem from="1552930659656" duration="3473000" />
       <workItem from="1553017078204" duration="153000" />
+<<<<<<< HEAD
       <workItem from="1553017798047" duration="31268000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1553017798047" duration="19875000" />
+      <workItem from="1553039065031" duration="8972000" />
+=======
+      <workItem from="1553017798047" duration="25385000" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="48390000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="45969000" />
+=======
+    <option name="totallyTimeSpent" value="42507000" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18699732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -415,6 +603,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -422,6 +611,12 @@
           <folding>
             <element signature="e#656#697#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/populate_readinghub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
         </state>
       </provider>
     </entry>
@@ -432,6 +627,29 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/readinghub/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
     <entry file="file://$PROJECT_DIR$/templates/registration/registration_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -446,20 +664,41 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/readinghub/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readinghub/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+=======
     <entry file="file://$PROJECT_DIR$/templates/readinghub/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="59" column="56" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="56" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/readinghub/recommend_book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="57">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -480,32 +719,104 @@
           <caret line="26" column="76" lean-forward="true" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
           <folding>
             <element signature="e#1251#1258#0#HTML" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="e#2521#2528#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ul#1;n#!!top" expanded="true" />
+            <element signature="e#4050#4057#0#HTML" expanded="true" />
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="133" column="10" selection-start-line="133" selection-end-line="133" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/list_profiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/readinghub/profile.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="612">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="817">
+          <caret line="43" column="31" selection-start-line="37" selection-start-column="24" selection-end-line="43" selection-end-column="31" />
+=======
+        <state relative-caret-position="527">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/populate_readinghub.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="137">
           <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/readinghub/show_book.html">
+=======
+        <state relative-caret-position="417">
+          <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/readinghub/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="60" column="96" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="e#656#697#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/book.html">
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
@@ -538,14 +849,65 @@
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/readinghub/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+=======
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadingHub_TeamProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/book.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="247">
+          <caret line="15" column="164" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/slicknav.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3094">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/readinghub/show_each_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2056">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+          <folding>
+            <element signature="e#19333#19378#0#HTML" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="442">
+          <caret line="26" column="76" lean-forward="true" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -571,8 +933,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/readinghub/category.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="555">
           <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+=======
+        <state relative-caret-position="578">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+>>>>>>> e5ea57c71873399c02fc96a2fd656d37afaf0007
+>>>>>>> 698a16df9c7e398f046c540f2166ccc5f11ce82c
         </state>
       </provider>
     </entry>

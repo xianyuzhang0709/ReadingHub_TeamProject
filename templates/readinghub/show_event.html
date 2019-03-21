@@ -1,0 +1,74 @@
+{% extends 'readinghub/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+{{ book.title }}
+{% endblock %}
+
+{% block body_block %}
+<section class="card-block text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading"><strong>{{ event.title }}</strong></h1><br/>
+        <p class="lead text-muted">Welcome! There is the details of the book! Click to show your like!</p><br/>
+    </div>
+</section>
+<table>
+    <tr>
+        <td>
+            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"><img src="{{ MEDIA_URL }}{{ event.image }}"
+                                                                             width="300" height="400" alt=""></div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+
+
+            <section id="about" class="section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+
+                                <p><strong>Description:</strong></p>
+                                <p>{{ event.description }}</p>
+
+                                <p class="admin-profile">
+                                    <span class="pro-title"> <strong>Venue:&nbsp;&nbsp; </strong></span> <span
+                                        class="pro-detail">{{ event.venue }}</span>
+                                </p>
+                                <p class="admin-profile">
+                                    <span class="pro-title"> <strong>Date：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                                    <span class="pro-detail"><a href="{{ event.date }}">{{ event.date }}</a></span>
+                                </p>
+                                <p class="admin-profile">
+                                    <span class="pro-title"><strong>Participators：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span>
+                                    <span id="like_count" class="badge badge-danger">{{ event.participators }}</span>
+                                </p>
+                            </div>
+
+                            <div>
+                                {% if user.is_authenticated %}
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="join" data-boookid="{{book.id}}"
+                                                                            class="btn btn-danger" type="button">Like it!</button></span>
+
+                                <span><button class="btn btn-outline-primary" id="join" data-id="{{event.id}}">Join &raquo;</button></span>
+
+                                {% endif %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Go to Top Link -->
+<a href="#" class="back-to-top">
+    <i class="icon-arrow-up"></i>
+</a>
+{% endblock %}

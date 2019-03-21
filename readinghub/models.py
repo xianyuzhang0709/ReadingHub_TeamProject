@@ -36,12 +36,12 @@ class Book(models.Model):
         self.slug = slugify(self.title)
         super(Book, self).save(*args, **kwargs)
 
-
     class Meta:
         verbose_name_plural = 'Books'
 
     def __str__(self):
         return self.title
+
 
 class Event(models.Model):
     title = models.CharField(max_length=128, unique=True)
@@ -51,7 +51,14 @@ class Event(models.Model):
     book = models.ForeignKey("Book", blank=True, null=True, on_delete=models.CASCADE)
     participators = models.IntegerField(default=0, blank=True)
     description = models.TextField(blank=True)
-    image = models.ImageField(default='lion.jpg', upload_to='event_images',blank=True)
+    image = models.ImageField(default='lion.jpg', upload_to='event_images', blank=True)
+    slug = models.SlugField(unique=True)
+
+    # reviews = models.ForeignKey(Reviews)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Event, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title
@@ -72,12 +79,12 @@ class UserProfile(models.Model):
 
 
 # User that joins an event
-class Participator(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    user = models.ForeignKey("UserProfile", blank=True, null=True, on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = ('event', 'user')
-
-    def __str__(self):
-        return self.user.user.username + " -> " + self.event.title
+# class Participator(models.Model):
+#     event = models.ForeignKey(Event, on_delete=models.CASCADE)
+#     user = models.ForeignKey("UserProfile", blank=True, null=True, on_delete=models.CASCADE)
+#
+#     class Meta:
+#         unique_together = ('event', 'user')
+#
+#     def __str__(self):
+#         return self.user.user.username + " -> " + self.event.title

@@ -2,24 +2,35 @@
 {% block title_block %}Recommend book{% endblock %}
 {% block body_block %}
     {% if category %}
-        <form role="form" id="book_form" method="post" action="/readinghub/category/{{category.slug}}/recommend_book/"  enctype="multipart/form-data">
-            <br />
-            <h2 class="form-signin-heading"> Recommend a book to <a href="/readinghub/category/{{category.slug}}/">{{ category.name }}</a></h2>
 
-            {% csrf_token %}
-            {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %}
-            {% for field in form.visible_fields %}
-                {{ field.errors }}
-                <strong>{{ field.help_text }}</strong>
-                {{ field }}<br/>
-                 <hr/>
-            {% endfor %}
+            <br />
+        <section class="card-block text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading"><strong> Recommend a new book to </strong><a href="/readinghub/category/{{category.slug}}/">{{ category.name }}</a></h1>
             <br/>
-            <button class="btn btn-primary" type="submit" name="submit">
-            Submit
-            </button>
+
+          </div>
+        </section>
+        <form role="form" id="book_form" method="post" action="/readinghub/category/{{category.slug}}/recommend_book/"  enctype="multipart/form-data">
+        <div class="'container text-center">
+
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                {% endfor %}
+                {% for field in form.visible_fields %}
+                    {{ field.errors }}
+                    <p><label >{{ field.help_text }}</label><br/>
+                    {{ field }}<br/><br/>
+                    </p>
+
+                {% endfor %}
+                <br/>
+                <button class="btn btn-primary" type="submit" name="submit">
+                Submit
+                </button>
+
+        </div>
         </form>
 
     {% else %}

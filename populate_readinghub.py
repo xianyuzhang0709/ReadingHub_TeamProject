@@ -77,8 +77,8 @@ def populate():
          "likes": 77},
         {"title": "Book of a Thousand Days",
          "author": "Shannon Hale",
-         "url": "When Dashti, a maid, and Lady Saren, her mistress, are shut in a tower for seven years because of Saren's refusal to marry a man she despises, the two prepare for a very long and dark imprisonment.",
-         "description": "https://www.amazon.co.uk/gp/product/1599900513/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb_uk-21&linkCode=as2&camp=1634&creative=6738",
+         "url": "https://www.amazon.co.uk/gp/product/1599900513/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb_uk-21&linkCode=as2&camp=1634&creative=6738",
+         "description": "When Dashti, a maid, and Lady Saren, her mistress, are shut in a tower for seven years because of Saren's refusal to marry a man she despises, the two prepare for a very long and dark imprisonment.",
          "likes": 22},
     ]
 

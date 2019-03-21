@@ -10,7 +10,11 @@
     <section class="card-block text-center">
       <div class="container">
         <h1 class="jumbotron-heading"><strong>{{selecteduser.username}}</strong></h1><br/>
+          {% if selecteduser.username == user.username %}
         <p class="lead text-muted">Hey! This is your profile, show more about yourself!</p><br/>
+          {% else %}
+        <p class="lead text-muted">Hey! This is <strong>{{selecteduser.username}}</strong>'s profile, just make a friend!</p><br/>
+          {% endif %}
       </div>
     </section>
 

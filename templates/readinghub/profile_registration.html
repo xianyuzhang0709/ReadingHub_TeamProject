@@ -3,10 +3,18 @@
     Registration - Step 2
 {% endblock %}
 {% block body_block %}
-<h1>Registration - Step 2</h1>
+
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>Registration - Step 2</strong></h1><br/>
+        <p class="lead text-muted">Upload your profile details and then you can show yourself in Best Readers.</p><br/>
+      </div>
+    </section>
+<div class="text-center">
 <form method="post" action="." enctype="multipart/form-data">
-{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="Submit" />
+        {% csrf_token %}
+        <strong>{{ form.as_p }}</strong>
+<input type="submit" value="Submit" class="btn btn-outline-primary"/>
 </form>
+</div>
 {% endblock %}

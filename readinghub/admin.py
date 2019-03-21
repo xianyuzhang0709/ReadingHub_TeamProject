@@ -1,5 +1,5 @@
 from django.contrib import admin
-from readinghub.models import Category, Book, Event
+from readinghub.models import Category, Book, Event, UserProfile
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -17,3 +17,4 @@ class EventAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Book, BookAdmin)
 admin.site.register(Event, EventAdmin)
+admin.site.register(UserProfile)

@@ -16,7 +16,7 @@ def index(request):
     event2 = event_list[1]
     event3 = event_list[2]
     category_list = Category.objects.all()
-    book_list = Book.objects.order_by('-likes')[:3]
+    book_list = Book.objects.order_by('-likes')[:6]
     context_dict = {'categories': category_list, 'books': book_list, 'event1': event1, 'event2': event2, 'event3': event3}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
@@ -210,7 +210,7 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    return render(request, 'accounts/register.html',
+    return render(request, 'readinghub/register.html',
                   {'user_form': user_form,
                    'profile_form': profile_form,
                    'registered': registered,})
@@ -257,7 +257,7 @@ def register_profile(request):
             user_profile.user = request.user
             user_profile.save()
 
-            return redirect('profiles')
+            return redirect('index')
         else:
             print(form.errors)
     context_dict = {'form': form,'event1': event1, 'event2': event2,'event3': event3}

@@ -1,30 +1,38 @@
 {% extends "readinghub/base.html" %}
-{% block body_block %}
-    <br />
-    <h2 class="form-signin-heading">Sign Up Here</h2>
-    <form role="form"  method="post" action=".">
-        {% csrf_token %}
-        <div class="form-group" >
-            <p class="required"><label class="required" for="id_username">Username:</label>
-                <input class="form-control" id="id_username" maxlength="30" name="username" type="text" />
-                <span class="helptext">
-                    Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only.
-                </span>
-            </p>
-            <p class="required"><label class="required" for="id_email">E-mail:</label>
-                <input class="form-control" id="id_email" name="email" type="email" />
-            </p>
-            <p class="required"><label class="required" for="id_password1">Password:</label>
-                <input class="form-control" id="id_password1" name="password1" type="password" />
-            </p>
-            <p class="required">
-                <label class="required" for="id_password2"> Password confirmation:</label>
-                <input class="form-control" id="id_password2" name="password2" type="password" />
+{% load staticfiles %}
+{% load readinghub_template_tags %}
 
-                <span class="helptext">Enter the same password as before, for verification.
-                </span>
-            </p>
+{% block title_block %}
+    Registration - Step 1
+{% endblock %}
+
+{% block body_block %}
+
+    <div class="container" style="width: 18rem;">
+    <h2 class="form-signin-heading text-center"> Sign Up Here</h2><br/>
+                <form role="form"  method="post" action="." >
+                    {% csrf_token %}
+                            <div class="form-group" >
+                                <p class="required"><label class="required" for="id_username">Username:</label>
+                                    <input class="form-control" id="id_username" maxlength="30" name="username" type="text" placeholder="Username"/>
+                                </p>
+                                <p class="required"><label class="required" for="id_email">  E-mail:</label>
+                                    <input class="form-control" id="id_email" name="email" type="email"  placeholder="email@ecample.com"/>
+                                </p>
+                                <p class="required"><label class="required" for="id_password1" >  Password:</label>
+                                    <input class="form-control" id="id_password1" name="password1" placeholder="password" type="password"/>
+                                </p>
+                                <p class="required">
+                                    <label class="required" for="id_password2" >  Password confirmation:</label>
+                                    <input class="form-control" id="id_password2" name="password2" type="password" placeholder="confirm passward"/>
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <br/>
+                            <button type="submit" class="btn btn-outline-primary">Submit</button>
+                            </div>
+                </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+
+
 {% endblock %}

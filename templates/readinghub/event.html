@@ -1,13 +1,65 @@
 {% extends 'readinghub/base.html' %}
-{% load staticfiles%}
+{% load staticfiles %}
 
 {% block title_block %}
- Events Page
+Events Page
 {% endblock %}
 
 {% block body_block %}
-    <div>
 
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong> Event Gallery </strong></h1><br/>
+        <p class="lead text-muted">Hey! Here is all events for you, come and make more friends!</p>
+      </div>
+    </section>
+    <div class="container ">
+        {% if events %}
+            <ul>
+            <div class="row">
+            {% for event in events %}
+                        <div class="col-6 col-md-4 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img class="rounded-circle" width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ event.image }}" data-holder-rendered="true">
+                            </div><br/>
+                             {{ event.title }}<br/>
+                            <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ event.auther }}</span></h6></p>
+
+
+                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>
+
+
+                        </div><!-- /.col-lg-4 -->
+                    {% endfor %}
+            </div>
+            </ul>
+        {% else %}
+        <strong>No event currently here.</strong>
+            <br/><br/>
+        {% endif %}
+    <div/>
+    
+
+    <div class="map-container">
+
+        <section class="card-block text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading"><strong> Locations Of Events </strong></h1><br/>
+          </div>
+        </section>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d60096.53669151715!2d-4.356014386700156!3d55.89406297123573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spopular+event+places+in+Glasgow!5e1!3m2!1sen!2suk!4v1553088423983"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
     </div>
 
-{% endblock %}
+        {% endblock %}
+
+        {%block foot_block%}
+
+        {%endblock%}
+
+
+
+

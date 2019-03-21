@@ -1,0 +1,54 @@
+.container{
+max-height:100%;
+padding-bottom:35%;
+width:100%
+
+}
+
+ .card-container{
+    perspective: 200rem;
+    position: relative;
+
+}
+
+
+
+
+
+
+.card-body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card-container:hover .card-front{
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back{
+
+    transform: rotateY(0deg);
+}
+
+
+.card-back{
+    transform: rotateY(180deg);
+    padding-left:0;
+    max-width:18rem;
+}
+
+.card{
+    transition: all 0.9s;
+    backface-visibility:hidden;
+
+
+}
+
+.details{
+        padding-top: 30px;
+    }
+
+
+.padding-0{
+    padding-top: 35%;
+}

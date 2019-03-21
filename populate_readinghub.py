@@ -145,18 +145,18 @@ def populate():
         'username': 'XianyuZhang',
         'email': 'xianyuzhang@qq.com',
         'password': 'zxyzxyzxy12',
-        'picture': '{% static 'images/12.png' %}',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
         'description': "I'm outgoing, come to make friend with me!",
     },
              {
-        'username': 'haotianwu',
+        'username': 'HaotianWu',
         'email': 'HaotianWu@qq.com',
         'password': 'zxyzxyzxy3242',
         'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/wu.jpg',
         'description': "I'm a handsome boy, come, let us talk about life!",
     },
              {
-        'username': 'chengxu',
+        'username': 'ChengXu',
         'email': 'XuCheng@qq.com',
         'password': 'zxyzxyzxy32423',
         'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
@@ -170,8 +170,6 @@ def populate():
         'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/Glory.jpg',
         'description': "I love books and hope I can talk with you guys here!",
     },
-
-    
      ]
 
     for u in users:

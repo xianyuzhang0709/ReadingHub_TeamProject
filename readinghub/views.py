@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 
 def index(request):
     category_list = Category.objects.all()
-    book_list = Book.objects.order_by('-likes')[:9]
+    book_list = Book.objects.order_by('-likes')[:3]
     context_dict = {'categories': category_list, 'books':book_list}
     response = render(request, 'readinghub/index.html', context_dict)
     return response

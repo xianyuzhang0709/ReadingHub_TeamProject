@@ -22,12 +22,11 @@ Events Page
                             <div class="teachers-thumbnail">
                               <img class="rounded-circle" width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ event.image }}" data-holder-rendered="true">
                             </div><br/>
-                             {{ event.title }}<br/>
-                            <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ event.auther }}</span></h6></p>
-
-
-                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>
-
+                            <p><h5>{{ event.title }}</h5></p>
+                            <p style="text-align:justify; text-justify:inter-ideograph;">{{ event.description }}</p>
+                            <p><h6>Participators:  <span class="badge badge-pill badge-primary">{{ event.participators }}</span></h6></p>
+                            <p><h6>Date: {{ event.date }} </h6> </p>
+                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Veiw more &raquo;</button></p>
 
                         </div><!-- /.col-lg-4 -->
                     {% endfor %}

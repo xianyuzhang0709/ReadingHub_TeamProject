@@ -20,9 +20,11 @@
                 {% endfor %}
                 {% for field in form.visible_fields %}
                     {{ field.errors }}
-                    <p><label >{{ field.help_text }}</label><br/>
-                    {{ field }}<br/><br/>
+                    <div class="form-group">
+                    <label >{{ field.help_text }}</label><br/>
+                        {{ field }}
                     </p>
+                    </div>
 
                 {% endfor %}
                 <br/>

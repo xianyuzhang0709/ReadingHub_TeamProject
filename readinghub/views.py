@@ -11,13 +11,18 @@ from django.contrib.auth.models import User
 
 
 def index(request):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     category_list = Category.objects.all()
     book_list = Book.objects.order_by('-likes')[:3]
-    context_dict = {'categories': category_list, 'books':book_list}
+    context_dict = {'categories': category_list, 'books': book_list, 'event1': event1, 'event2': event2, 'event3': event3}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
 
 def show_category(request, category_name_slug):
+    event_list = Event.objects.all()[:3]
     context_dict = {}
 
     try:
@@ -26,6 +31,8 @@ def show_category(request, category_name_slug):
         context_dict['books'] = books
         context_dict['category'] = category
         context_dict['category_name_slug'] = category_name_slug
+        context_dict['event_list'] = event_list
+
     except Category.DoesNotExist:
         context_dict['books'] = None
         context_dict['category'] = None

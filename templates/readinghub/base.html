@@ -32,7 +32,6 @@
     </title>
   </head>
 
-
   <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +67,7 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
+
       <div class="carousel-inner" role="listbox">
 
 
@@ -75,8 +75,8 @@
           <img class="first-slide" src="{% static 'images/e8.jpg' %}" alt="First slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-left ">
-              <h1>Event One.</h1>
-              <p>Welcome to recent event page.</p>
+              <h1>{{ event1.title }}</h1>
+              <p>{{ event1.description }}</p>
               <p><a class="btn btn-outline-secondary" href="#" role="button">Learn More</a></p>
             </div>
           </div>
@@ -86,8 +86,8 @@
           <img class="second-slide" src="{% static 'images/eee7.jpg' %}" alt="Second slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>{{ event2.title }}</h1>
+              <p>{{ event2.description }}</p>
               <p><a class="btn btn-outline-secondary" color href="#" role="button">Learn more</a></p>
             </div>
           </div>
@@ -96,13 +96,14 @@
           <img class="third-slide" src="{% static 'images/eee4.jpg' %}" alt="Third slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>{{ event3.title }}</h1>
+              <p>{{ event3.description }}</p>
               <p><a class="btn btn-outline-secondary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>
       </div>
+
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>

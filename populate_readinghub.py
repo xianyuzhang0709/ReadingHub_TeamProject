@@ -99,7 +99,7 @@ def populate():
             print("- {0} - {1}".format(str(c), str(b)))
 
 
-    events = [{'title': "I would like to share my favourite book with you",
+    events = [{'title': "Come on! Read me!",
                   'venue': "University Avenue, Glasgow G12 8QQ",
                   "date": "2019/01/08",
                   "time": "14:30",
@@ -139,7 +139,7 @@ def populate():
 
     for e in events:
         add_event(e)
-        print("666")
+        print(e.title)
 
     users = [{
         'username': 'XianyuZhang',
@@ -174,7 +174,7 @@ def populate():
 
     for u in users:
         add_user_profile(u)
-        print("777")
+        print(u.username)
 
 
 def add_book(cat, title, author, url, description, likes=0):

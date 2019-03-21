@@ -20,15 +20,14 @@ Events Page
             {% for event in events %}
                         <div class="col-6 col-md-4 text-center" ><br/>
                             <div class="teachers-thumbnail">
-                              <img class="rounded-circle" width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ event.image }}" data-holder-rendered="true">
+                              <img class="rounded-circle" width="255" height="380" alt="{{event.title}}" src="{{ MEDIA_URL }}{{ event.image }}" data-holder-rendered="true">
                             </div><br/>
-                            <p><h5>{{ event.title }}</h5></p>
+                            <p><a href="{% url 'show_event' event.slug %}">{{ event.title }}</a></p>
+
                             <p style="text-align:justify; text-justify:inter-ideograph;">{{ event.description }}</p>
                             <p><h6>Participators:  <span class="badge badge-pill badge-primary">{{ event.participators }}</span></h6></p>
                             <p><h6>Date: {{ event.date }} </h6> </p>
-                             <a href="{% url 'show_event' event.slug %}">
-                                <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Veiw more &raquo;</button></p>
-                              </a>
+
                         </div><!-- /.col-lg-4 -->
                     {% endfor %}
             </div>

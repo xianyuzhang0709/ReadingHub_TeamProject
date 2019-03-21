@@ -99,21 +99,13 @@ def populate():
             print("- {0} - {1}".format(str(c), str(b)))
 
 
-    events = [{'title': "Come on! Read me!",
-                  'venue': "University Avenue, Glasgow G12 8QQ",
-                  "date": "2019/01/08",
-                  "time": "14:30",
-                  'book': "Sapiens: A brief History of Humankind",
-                  'participators': "32",
-                  'description': " The poet Rilke described the people who were reading: they flipped the pages of the book, just like the dreamer turned over. More image, reading is like this, forget everything, immersed in the dream of no side",
-                  },
-
+    events = [
                 {'title': "Let's enjoy the life! Coming!",
                   'venue': "603 Great Western Rd, Glasgow G12 8HX",
                   "date": "2019/01/15",
                   "time": "18:30",
                   'book': "Book of a Thousand Days",
-                  'participators': "32",
+                  'participators': "44",
                   'description': "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
                   },
                 
@@ -122,7 +114,7 @@ def populate():
                   "date": "2019/02/06",
                   "time": "9:30",
                   'book': "The Complete Poems of Emily Dickson",
-                  'participators': "32",
+                  'participators': "157",
                   'description': "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
                   },
                 
@@ -131,7 +123,7 @@ def populate():
                   "date": "2019/03/07",
                   "time": "19:30",
                   'book': "The Lion, the Witch and the Wardrobe",
-                  'participators': "32",
+                  'participators': "66",
                   'description': "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
                   },
               ]
@@ -139,7 +131,7 @@ def populate():
 
     for e in events:
         add_event(e)
-        print("Adding event")
+        print("Adding event...")
 
     users = [{
         'username': 'XianyuZhang',
@@ -174,7 +166,7 @@ def populate():
 
     for u in users:
         add_user_profile(u)
-        print("Adding User")
+        print("Adding User...")
 
 
 def add_book(cat, title, author, url, description, likes=0):

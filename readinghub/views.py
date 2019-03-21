@@ -17,8 +17,7 @@ def index(request):
     event3 = event_list[2]
     category_list = Category.objects.all()
     book_list = Book.objects.order_by('-likes')[:3]
-    context_dict = {'categories': category_list, 'books': book_list, 'event1': event1, 'event2': event2,
-                    'event3': event3}
+    context_dict = {'categories': category_list, 'books': book_list, 'event1': event1, 'event2': event2, 'event3': event3}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
 
@@ -154,19 +153,6 @@ def about(request):
     return response
 
 
-def show_each_book(request):
-    event_list = Event.objects.all()
-    event1 = event_list[0]
-    event2 = event_list[1]
-    event3 = event_list[2]
-    context_dict = {}
-    context_dict['event1'] = event1
-    context_dict['event2'] = event2
-    context_dict['event3'] = event3
-    response = render(request, 'readinghub/show_each_book.html',context_dict)
-    return response
-
-
 @login_required
 def like_book(request):
     bookid = None
@@ -224,10 +210,10 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    return render(request, 'readinghub/register.html',
+    return render(request, 'accounts/register.html',
                   {'user_form': user_form,
                    'profile_form': profile_form,
-                   'registered': registered})
+                   'registered': registered,})
 
 
 def user_login(request):
@@ -247,7 +233,7 @@ def user_login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
-        return render(request, 'readinghub/login.html', {})
+        return render(request, 'readinghub/login.html',)
 
 
 @login_required
@@ -271,7 +257,7 @@ def register_profile(request):
             user_profile.user = request.user
             user_profile.save()
 
-            return redirect('index')
+            return redirect('profiles')
         else:
             print(form.errors)
     context_dict = {'form': form,'event1': event1, 'event2': event2,'event3': event3}
@@ -314,15 +300,12 @@ def list_profiles(request):
 
 
 def event(request):
-    # Queries the database of a list of all books currently stored.
-    # Order the books by number of likes in descending order
     event_list = Event.objects.all()
     event1 = event_list[0]
     event2 = event_list[1]
     event3 = event_list[2]
-    context_dict = {}
-    event_list = Event.objects.all()
-    context_dict = {'events': event_list,'event1': event1, 'event2': event2,'event3': event3}
+    event_order_list = Event.objects.order_by('-participators')
+    context_dict = {'events': event_order_list, 'event1': event1, 'event2': event2,'event3': event3}
     response = render(request, 'readinghub/event.html', context_dict)
     return response
 
@@ -372,4 +355,4 @@ class UserFormView(View):
                     login(request, user)
                     return redirect('index')
 
-            return render(request, self.template_name, {'forms': form})
+            return render(request, self.template_name, {'forms': form,})

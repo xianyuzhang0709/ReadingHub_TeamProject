@@ -19,7 +19,7 @@ $(document).ready( function() {
     $('#joins').click(function(){
         var evventid;
         evventid = $(this).attr("data-evventid");
-        $.get('/readinghub/join_event/', {event_id: evventid}, function(data){
+        $.get('/readinghub/join/', {event_id: evventid}, function(data){
             $('#participators_count').html(data);
             $('#joins').hide();
         });

@@ -14,8 +14,7 @@
 <table>
     <tr>
         <td>
-            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"><img src="{{ MEDIA_URL }}{{ events.image }}"
-                                                                             width="300" height="400" alt=""></div>
+            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"><img src="{{ MEDIA_URL }}{{ events.image }}"width="300" height="400" alt=""></div>
         </td>
         <td>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -54,7 +53,7 @@
                             <div>
                                 {% if user.is_authenticated %}
 
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-primary" id="joins" data-id="{{events.id}}"> Join </button></span>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" id="joins" data-evventid="{{events.id}}"> Join it!</button></span>
 
                                 {% endif %}
                             </div>

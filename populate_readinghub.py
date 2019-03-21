@@ -6,7 +6,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 import django
 
 django.setup()
-from readinghub.models import Category, Book
+from readinghub.models import Category, Book, Event, UserProfile, User
+from datetime import datetime
+from django.contrib.auth.models import User
+
 
 
 def populate():
@@ -84,6 +87,7 @@ def populate():
             "Poetry": {"books": poetry_books},
             "Children Books": {"books": children_books}}
 
+
     for cat, cat_data in cats.items():
         c = add_cat(cat)
         for b in cat_data["books"]:
@@ -93,6 +97,33 @@ def populate():
     for c in Category.objects.all():
         for b in Book.objects.filter(category=c):
             print("- {0} - {1}".format(str(c), str(b)))
+
+
+    events = [{'title': "first title",
+                  'venue': "first venue",
+                  "date": "2019/02/07",
+                  "time": "19:30",
+                  'book': "Sapiens: A brief History of Humankind",
+                  'participators': "32",
+                  'description': "first description",
+                  },
+              ]
+
+    for e in events:
+        add_event(e)
+        print("666")
+
+    users = [{
+        'username': 'lililil',
+        'email': '792373426@qq.com',
+        'password': 'zxyzxyzxy',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/HarryPotter.jpg',
+        'description': "first description",
+    }, ]
+
+    for u in users:
+        add_user_profile(u)
+        print("777")
 
 
 def add_book(cat, title, author, url, description, likes=0):
@@ -109,6 +140,21 @@ def add_cat(name):
     c = Category.objects.get_or_create(name=name)[0]
     c.save()
     return c
+
+def add_event(event):
+    event_date = datetime.strptime(event['date'] + " " + event['time'], '%Y/%m/%d %H:%M')
+
+    e = Event.objects.get_or_create(title=event["title"], venue=['venue'], date=event_date, time=event['time'], participators=event['participators'], description=event['description'])[0]
+    e.save()
+    return e
+
+def add_user_profile(user):
+    u = User.objects.create_user(username=user["username"], email=user["email"], password=user["password"])
+    u.save()
+    user_profile = UserProfile.objects.get_or_create(user=u, description=user["description"])[0]
+    user_profile.save()
+    return user_profile
+
 
 
 # Execution starts here

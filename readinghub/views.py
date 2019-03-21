@@ -22,7 +22,10 @@ def index(request):
     return response
 
 def show_category(request, category_name_slug):
-    event_list = Event.objects.all()[:3]
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     context_dict = {}
 
     try:
@@ -32,6 +35,9 @@ def show_category(request, category_name_slug):
         context_dict['category'] = category
         context_dict['category_name_slug'] = category_name_slug
         context_dict['event_list'] = event_list
+        context_dict['event1'] = event1
+        context_dict['event2'] = event2
+        context_dict['event3'] = event3
 
     except Category.DoesNotExist:
         context_dict['books'] = None
@@ -41,6 +47,7 @@ def show_category(request, category_name_slug):
     return render(request, 'readinghub/category.html', context_dict)
 
 def show_book(request, category_name_slug, book_name_slug):
+
     context_dict = {}
 
     try:
@@ -60,6 +67,7 @@ def show_book(request, category_name_slug, book_name_slug):
 
 
 def recommend_book(request, category_name_slug):
+
     try:
         category = Category.objects.get(slug=category_name_slug)
     except Category.DoesNotExist:

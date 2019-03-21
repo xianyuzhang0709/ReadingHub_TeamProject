@@ -11,6 +11,7 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 
+
 def populate():
     # Created a list of dictionaries containing books placed in different category.
 
@@ -86,6 +87,7 @@ def populate():
             "Poetry": {"books": poetry_books},
             "Children Books": {"books": children_books}}
 
+
     for cat, cat_data in cats.items():
         c = add_cat(cat)
         for b in cat_data["books"]:
@@ -96,46 +98,48 @@ def populate():
         for b in Book.objects.filter(category=c):
             print("- {0} - {1}".format(str(c), str(b)))
 
-    events = [{'title': "I would like to share my favourite book with you",
-               'venue': "University Avenue, Glasgow G12 8QQ",
-               "date": "2019/01/08",
-               "time": "14:30",
-               'book': "Sapiens: A brief History of Humankind",
-               'participators': "32",
-               'description': " The poet Rilke described the people who were reading: they flipped the pages of the book, just like the dreamer turned over. More image, reading is like this, forget everything, immersed in the dream of no side",
-               },
 
-              {'title': "Let's enjoy the life! Coming!",
-               'venue': "603 Great Western Rd, Glasgow G12 8HX",
-               "date": "2019/01/15",
-               "time": "18:30",
-               'book': "Book of a Thousand Days",
-               'participators': "32",
-               'description': "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
-               },
+    events = [{'title': "Come on! Read me!",
+                  'venue': "University Avenue, Glasgow G12 8QQ",
+                  "date": "2019/01/08",
+                  "time": "14:30",
+                  'book': "Sapiens: A brief History of Humankind",
+                  'participators': "32",
+                  'description': " The poet Rilke described the people who were reading: they flipped the pages of the book, just like the dreamer turned over. More image, reading is like this, forget everything, immersed in the dream of no side",
+                  },
 
-              {'title': "Dreams in the book, come, guys!",
-               'venue': "Millfield, Livingston EH54 7AR",
-               "date": "2019/02/06",
-               "time": "9:30",
-               'book': "The Complete Poems of Emily Dickson",
-               'participators': "32",
-               'description': "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
-               },
-
-              {'title': "Come to join us! we need you !",
-               'venue': "the killingworth centre, Killingworth, Newcastle upon Tyne NE12 6HA",
-               "date": "2019/03/07",
-               "time": "19:30",
-               'book': "The Lion, the Witch and the Wardrobe",
-               'participators': "32",
-               'description': "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
-               },
+                {'title': "Let's enjoy the life! Coming!",
+                  'venue': "603 Great Western Rd, Glasgow G12 8HX",
+                  "date": "2019/01/15",
+                  "time": "18:30",
+                  'book': "Book of a Thousand Days",
+                  'participators': "32",
+                  'description': "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
+                  },
+                
+                {'title': "Dreams in the book, come, guys!",
+                  'venue': "Millfield, Livingston EH54 7AR",
+                  "date": "2019/02/06",
+                  "time": "9:30",
+                  'book': "The Complete Poems of Emily Dickson",
+                  'participators': "32",
+                  'description': "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
+                  },
+                
+                {'title': "Come to join us! we need you !",
+                  'venue': "the killingworth centre, Killingworth, Newcastle upon Tyne NE12 6HA",
+                  "date": "2019/03/07",
+                  "time": "19:30",
+                  'book': "The Lion, the Witch and the Wardrobe",
+                  'participators': "32",
+                  'description': "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
+                  },
               ]
+
 
     for e in events:
         add_event(e)
-        print("666")
+        print(e.title)
 
     users = [{
         'username': 'XianyuZhang',
@@ -144,33 +148,33 @@ def populate():
         'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
         'description': "I'm outgoing, come to make friend with me!",
     },
-        {
-            'username': 'HaotianWu',
-            'email': 'HaotianWu@qq.com',
-            'password': 'zxyzxyzxy3242',
-            'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/wu.jpg',
-            'description': "I'm a handsome boy, come, let us talk about life!",
-        },
-        {
-            'username': 'ChengXu',
-            'email': 'XuCheng@qq.com',
-            'password': 'zxyzxyzxy32423',
-            'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
-            'description': "we come from different places, but we should be friends with each other!",
-        },
+             {
+        'username': 'HaotianWu',
+        'email': 'HaotianWu@qq.com',
+        'password': 'zxyzxyzxy3242',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/wu.jpg',
+        'description': "I'm a handsome boy, come, let us talk about life!",
+    },
+             {
+        'username': 'ChengXu',
+        'email': 'XuCheng@qq.com',
+        'password': 'zxyzxyzxy32423',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
+        'description': "we come from different places, but we should be friends with each other!",
+    },
 
-        {
-            'username': 'AsuquoEffiongGlory',
-            'email': 'AsuquoEffiongGlory@outlook.com',
-            'password': 'zxyzxyzxy32423',
-            'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/Glory.jpg',
-            'description': "I love books and hope I can talk with you guys here!",
-        },
-    ]
+    {
+        'username': 'AsuquoEffiongGlory',
+        'email': 'AsuquoEffiongGlory@outlook.com',
+        'password': 'zxyzxyzxy32423',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/Glory.jpg',
+        'description': "I love books and hope I can talk with you guys here!",
+    },
+     ]
 
     for u in users:
         add_user_profile(u)
-        print("777")
+        print(u.username)
 
 
 def add_book(cat, title, author, url, description, likes=0):
@@ -188,15 +192,12 @@ def add_cat(name):
     c.save()
     return c
 
-
 def add_event(event):
     event_date = datetime.strptime(event['date'] + " " + event['time'], '%Y/%m/%d %H:%M')
 
-    e = Event.objects.get_or_create(title=event["title"], venue=['venue'], date=event_date, time=event['time'],
-                                    participators=event['participators'], description=event['description'])[0]
+    e = Event.objects.get_or_create(title=event["title"], venue=['venue'], date=event_date, time=event['time'], participators=event['participators'], description=event['description'])[0]
     e.save()
     return e
-
 
 def add_user_profile(user):
     u = User.objects.create_user(username=user["username"], email=user["email"], password=user["password"])
@@ -204,6 +205,7 @@ def add_user_profile(user):
     user_profile = UserProfile.objects.get_or_create(user=u, description=user["description"])[0]
     user_profile.save()
     return user_profile
+
 
 
 # Execution starts here

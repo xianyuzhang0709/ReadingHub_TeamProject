@@ -20,6 +20,4 @@ urlpatterns = [
     url(r'^show_each_book/$', views.show_each_book, name='show_each_book'),
     url(r'^like/$', views.like_book, name='like_book'),
 
-
-
 ]

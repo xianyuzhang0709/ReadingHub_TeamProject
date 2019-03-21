@@ -11,14 +11,21 @@ from django.contrib.auth.models import User
 
 
 def index(request):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     category_list = Category.objects.all()
     book_list = Book.objects.order_by('-likes')[:3]
-    context_dict = {'categories': category_list, 'books': book_list}
+    context_dict = {'categories': category_list, 'books': book_list, 'event1': event1, 'event2': event2, 'event3': event3}
     response = render(request, 'readinghub/index.html', context_dict)
     return response
 
-
 def show_category(request, category_name_slug):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     context_dict = {}
 
     try:
@@ -27,6 +34,11 @@ def show_category(request, category_name_slug):
         context_dict['books'] = books
         context_dict['category'] = category
         context_dict['category_name_slug'] = category_name_slug
+        context_dict['event_list'] = event_list
+        context_dict['event1'] = event1
+        context_dict['event2'] = event2
+        context_dict['event3'] = event3
+
     except Category.DoesNotExist:
         context_dict['books'] = None
         context_dict['category'] = None
@@ -34,8 +46,8 @@ def show_category(request, category_name_slug):
 
     return render(request, 'readinghub/category.html', context_dict)
 
-
 def show_book(request, category_name_slug, book_name_slug):
+
     context_dict = {}
 
     try:
@@ -51,10 +63,11 @@ def show_book(request, category_name_slug, book_name_slug):
         context_dict['category_name_slug'] = None
         context_dict['book_name_slug'] = None
 
-    return render(request, 'readinghub/show_book.html', context_dict)
+    return render(request,'readinghub/show_book.html', context_dict)
 
 
 def recommend_book(request, category_name_slug):
+
     try:
         category = Category.objects.get(slug=category_name_slug)
     except Category.DoesNotExist:
@@ -85,16 +98,13 @@ def all_book(request):
     response = render(request, 'readinghub/book.html', context_dict)
     return response
 
-
 def about(request):
     response = render(request, 'readinghub/about.html')
     return response
 
-
 def show_each_book(request):
     response = render(request, 'readinghub/show_each_book.html')
     return response
-
 
 @login_required
 def like_book(request):
@@ -110,40 +120,38 @@ def like_book(request):
                 boook.save()
     return HttpResponse(likes)
 
-
 def register(request):
     registered = False
     if request.method == 'POST':
-        user_form = UserForm(data=request.POST)
-        profile_form = UserProfileForm(data=request.POST)
+            user_form = UserForm(data=request.POST)
+            profile_form = UserProfileForm(data=request.POST)
 
-        if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save()
-            user.set_password(user.password)
-            user.save()
+            if user_form.is_valid() and profile_form.is_valid():
+                user = user_form.save()
+                user.set_password(user.password)
+                user.save()
 
-            profile = profile_form.save(commit=False)
-            profile.user = user
+                profile = profile_form.save(commit=False)
+                profile.user = user
 
-            if 'picture' in request.FILES:
-                profile.picture = request.FILES['picture']
+                if 'picture' in request.FILES:
+                    profile.picture = request.FILES['picture']
 
-            profile.save()
-            registered = True
+                profile.save()
+                registered = True
 
-        else:
-            print(user_form.errors, profile_form.errors)
+            else:
+                print(user_form.errors, profile_form.errors)
 
     else:
-        # These forms will be blank, ready for user input.
-        user_form = UserForm()
-        profile_form = UserProfileForm()
+            # These forms will be blank, ready for user input.
+            user_form = UserForm()
+            profile_form = UserProfileForm()
 
     return render(request, 'readinghub/register.html',
-                  {'user_form': user_form,
-                   'profile_form': profile_form,
-                   'registered': registered})
-
+                       {'user_form': user_form,
+                        'profile_form': profile_form,
+                        'registered': registered})
 
 def user_login(request):
     if request.method == 'POST':
@@ -164,12 +172,10 @@ def user_login(request):
     else:
         return render(request, 'readinghub/login.html', {})
 
-
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-
 
 @login_required
 def register_profile(request):
@@ -210,7 +216,7 @@ def profile(request, username):
 @login_required
 def list_profiles(request):
     userprofile_list = UserProfile.objects.all()
-    return render(request, 'readinghub/list_profiles.html', {'userprofile_list': userprofile_list})
+    return render(request, 'readinghub/list_profiles.html', {'userprofile_list' : userprofile_list})
 
 
 def event(request):
@@ -231,20 +237,6 @@ def book(request):
     context_dict = {'books': book_list}
     response = render(request, 'readinghub/book.html', context_dict)
     return response
-
-
-def show_event(request, event_name_slug):
-    context_dict = {}
-
-    try:
-        events = Event.objects.get(slug=event_name_slug)
-        context_dict['events'] = events
-        context_dict['event_name_slug'] = event_name_slug
-    except Event.DoesNotExist:
-        context_dict['events'] = None
-        context_dict['event_name_slug'] = None
-
-    return render(request, 'readinghub/show_event.html', context_dict)
 
 
 class UserFormView(View):
@@ -275,6 +267,7 @@ class UserFormView(View):
             if user is not None:
 
                 if user.is_active:
+
                     login(request, user)
                     return redirect('index')
 

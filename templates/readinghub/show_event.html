@@ -8,7 +8,7 @@
 <section class="card-block text-center">
     <div class="container">
         <h1 class="jumbotron-heading"><strong>{{ event.title }}</strong></h1><br/>
-        <p class="lead text-muted">Welcome! There is the details of the book! Click to show your like!</p><br/>
+        <p class="lead text-muted">Welcome! There is the details of Events! Click to join!</p><br/>
     </div>
 </section>
 <table>
@@ -34,6 +34,10 @@
                                 <p>{{ event.description }}</p>
 
                                 <p class="admin-profile">
+                                    <span class="pro-title"> <strong>Book:&nbsp;&nbsp; </strong></span> <span
+                                        class="pro-detail">{{ event.book }}</span>
+
+                                <p class="admin-profile">
                                     <span class="pro-title"> <strong>Venue:&nbsp;&nbsp; </strong></span> <span
                                         class="pro-detail">{{ event.venue }}</span>
                                 </p>
@@ -43,16 +47,14 @@
                                 </p>
                                 <p class="admin-profile">
                                     <span class="pro-title"><strong>Participators：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span>
-                                    <span id="like_count" class="badge badge-danger">{{ event.participators }}</span>
+                                    <span id="participators_count" class="badge badge-danger">{{ event.participators }}</span>
                                 </p>
                             </div>
 
                             <div>
                                 {% if user.is_authenticated %}
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="join" data-boookid="{{book.id}}"
-                                                                            class="btn btn-danger" type="button">Like it!</button></span>
 
-                                <span><button class="btn btn-outline-primary" id="join" data-id="{{event.id}}">Join &raquo;</button></span>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<button class="btn btn-outline-primary" id="join" data-id="{{event.id}}"> Join </button></span>
 
                                 {% endif %}
                             </div>

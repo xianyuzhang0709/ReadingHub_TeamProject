@@ -16,17 +16,17 @@ def populate():
     # Created a list of dictionaries containing books placed in different category.
 
     fiction_books = [
-        {"title": "The Hunger Games - 1",
+        {"title": "The Hunger Games",
          "author": "Suzanne Collins",
          "url": "https://www.amazon.com/gp/product/0439023483/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0439023483&SubscriptionId=1MGPYB6YW3HWK55XCGG2",
          "description": "Could you survive on your own, in the wild, with everyone out to make sure you don't live to see the morning? In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of twelve and eighteen to participate in the annual Hunger Games, a fight to the death on live TV. Sixteen-year-old Katniss Everdeen, who lives alone with her mother and younger sister, regards it as a death sentence when she is forced to represent her district in the Games. But Katniss has been close to dead before - and survival, for her, is second nature. Without really meaning to, she becomes a contender. But if she is to win, she will have to start making choices that weigh survival against humanity and life against love.",
          "likes": 12},
-        {"title": "Harry Potter and the Sorcerer's Stone - 1",
+        {"title": "Harry Potter and the Sorcerer's Stone",
          "author": "J.k.Rowling",
          "url": "https://www.amazon.com/gp/product/0439554934/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0439554934&SubscriptionId=1MGPYB6YW3HWK55XCGG2",
          "description": "Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, who force him to live in a tiny closet under the stairs. But his fortune changes when he receives a letter that tells him the truth about himself: he's a wizard. A mysterious visitor rescues him from his relatives and takes him to his new home, Hogwarts School of Witchcraft and Wizardry.",
          "likes": 22},
-        {"title": "The Great Gatsby (Paperback)",
+        {"title": "The Great Gatsby",
          "author": "Scott Fitzgerald",
          "url": "https://www.amazon.com/s?k=The+Great+Gatsby&i=stripbooks&adid=082VK13VJJCZTQYGWWCZ&campaign=211041&creative=374001&tag=x_gr_w_bb-20&ref=x_gr_w_bb",
          "description": "THE GREAT GATSBY, F. Scott Fitzgerald's third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story is of the fabulously wealthy Jay Gatsby and his new love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted gin was the national drink and sex the national obsession, it is an exquisitely crafted tale of America in the 1920s.",
@@ -44,7 +44,7 @@ def populate():
          "url": "https://www.amazon.com/gp/product/B00L0F01NK/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00L0F01NK&SubscriptionId=1MGPYB6YW3HWK55XCGG2",
          "description": "What does “feminism” mean today? That is the question at the heart of We Should All Be Feminists, a personal, eloquently-argued essay—adapted from her much-viewed TEDx talk of the same name—by Chimamanda Ngozi Adichie, the award-winning author of Americanah and Half of a Yellow Sun.",
          "likes": 11},
-        {"title": "I Am Malala: The Story of the Girl Who Stood Up for Education and Was Shot by the Taliban",
+        {"title": "I Am Malala",
          "author": "Malala Yousafzai, Christina Lamb",
          "url": "https://www.amazon.com/gp/product/0316322407/ref=x_gr_e_nl_newreleases_sout_bb?ie=UTF8&tag=x_gr_e_nl_newreleases_sout_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0316322407&SubscriptionId=1MGPYB6YW3HWK55XCGG2",
          "description": "When the Taliban took control of the Swat Valley in Pakistan, one girl spoke out. Malala Yousafzai refused to be silenced and fought for her right to an education.",
@@ -59,18 +59,18 @@ def populate():
          "likes": 22},
         {"title": "Twenty Love Poems and a Song of Despair",
          "author": "Pablo Neruda",
-         "url": "",
+         "url": "https://www.amazon.com/Twenty-Poems-Despair-Spanish-English/dp/0143039962/ref=sr_1_1?keywords=Twenty+Love+Poems+and+a+Song+of+Despair&qid=1553134564&s=gateway&sr=8-1",
          "description": "When it appeared in 1924, this work launched into the international spotlight a young and unknown poet whose writings would ignite a generation. W. S. Merwin's incomparable translation faces the original Spanish text. Now in a black-spine Classics edition with an introduction by Cristina Garcia, this book stands as an essential collection that continues to inspire lovers and poets around the world. The most popular work by Chile's Nobel Prize-winning poet, and the subject of Pablo Larraín's acclaimed feature film Neruda starring Gael García Bernal.",
          "likes": 44},
     ]
 
     children_books = [
-        {"title": "Ella Enchanted - 1",
+        {"title": "Ella Enchanted",
          "author": "Gail Carson Levine",
          "url": "https://www.goodreads.com/book/show/24337.Ella_Enchanted",
          "description": "At birth, Ella is inadvertently cursed by an imprudent young fairy named Lucinda, who bestows on her the gift of obedience. Anything anyone tells her to do, Ella must obey. Another girl might have been cowed by this affliction, but not feisty Ella: Instead of making me docile, Lucinda's curse made a rebel of me. Or perhaps I was that way naturally. When her beloved mother dies, leaving her in the care of a mostly absent and avaricious father, and later, a loathsome stepmother and two treacherous stepsisters, Ellas life and well-being seem to be in grave peril. But her intelligence and saucy nature keep her in good stead as she sets out on a quest for freedom and self-discovery as she tries to track down Lucinda to undo the curse, fending off ogres, befriending elves, and falling in love with a prince along the way. Yes, there is a pumpkin coach, a glass slipper, and a happily ever after, but this is the most remarkable, delightful, and profound version of Cinderella you will ever read.",
          "likes": 55},
-        {"title": "The Lion, the Witch and the Wardrobe (Chronicles of Narnia) - 1",
+        {"title": "The Lion, the Witch and the Wardrobe",
          "author": "C.S Lewis",
          "url": "https://www.amazon.com/gp/product/0060764899/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0060764899&SubscriptionId=1MGPYB6YW3HWK55XCGG2",
          "description": "NARNIA...the land beyond the wardrobe, the secret country known only to Peter, Susan, Edmund, and Lucy...the place where the adventure begins. Lucy is the first to find the secret of the wardrobe in the professor's mysterious old house. At first, no one believes her when she tells of her adventures in the land of Narnia. But soon Edmund and then Peter and Susan discover the Magic and meet Aslan, the Great Lion, for themselves. In the blink of an eye, their lives are changed forever",
@@ -99,27 +99,80 @@ def populate():
             print("- {0} - {1}".format(str(c), str(b)))
 
 
-    events = [{'title': "first title",
-                  'venue': "first venue",
-                  "date": "2019/02/07",
-                  "time": "19:30",
+    events = [{'title': "I would like to share my favourite book with you",
+                  'venue': "University Avenue, Glasgow G12 8QQ",
+                  "date": "2019/01/08",
+                  "time": "14:30",
                   'book': "Sapiens: A brief History of Humankind",
                   'participators': "32",
-                  'description': "first description",
+                  'description': " The poet Rilke described the people who were reading: they flipped the pages of the book, just like the dreamer turned over. More image, reading is like this, forget everything, immersed in the dream of no side",
+                  },
+
+                {'title': "Let's enjoy the life! Coming!",
+                  'venue': "603 Great Western Rd, Glasgow G12 8HX",
+                  "date": "2019/01/15",
+                  "time": "18:30",
+                  'book': "Book of a Thousand Days",
+                  'participators': "32",
+                  'description': "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
+                  },
+                
+                {'title': "Dreams in the book, come, guys!",
+                  'venue': "Millfield, Livingston EH54 7AR",
+                  "date": "2019/02/06",
+                  "time": "9:30",
+                  'book': "The Complete Poems of Emily Dickson",
+                  'participators': "32",
+                  'description': "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
+                  },
+                
+                {'title': "Come to join us! we need you !",
+                  'venue': "the killingworth centre, Killingworth, Newcastle upon Tyne NE12 6HA",
+                  "date": "2019/03/07",
+                  "time": "19:30",
+                  'book': "The Lion, the Witch and the Wardrobe",
+                  'participators': "32",
+                  'description': "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
                   },
               ]
+
 
     for e in events:
         add_event(e)
         print("666")
 
     users = [{
-        'username': 'lililil',
-        'email': '792373426@qq.com',
-        'password': 'zxyzxyzxy',
-        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/HarryPotter.jpg',
-        'description': "first description",
-    }, ]
+        'username': 'XianyuZhang',
+        'email': 'xianyuzhang@qq.com',
+        'password': 'zxyzxyzxy12',
+        'picture': '{% static 'images/12.png' %}',
+        'description': "I'm outgoing, come to make friend with me!",
+    },
+             {
+        'username': 'haotianwu',
+        'email': 'HaotianWu@qq.com',
+        'password': 'zxyzxyzxy3242',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/wu.jpg',
+        'description': "I'm a handsome boy, come, let us talk about life!",
+    },
+             {
+        'username': 'chengxu',
+        'email': 'XuCheng@qq.com',
+        'password': 'zxyzxyzxy32423',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/xu.jpg',
+        'description': "we come from different places, but we should be friends with each other!",
+    },
+
+    {
+        'username': 'AsuquoEffiongGlory',
+        'email': 'AsuquoEffiongGlory@outlook.com',
+        'password': 'zxyzxyzxy32423',
+        'picture': '/Users/zhangxianyu/ReadingHub_TeamProject/media/Glory.jpg',
+        'description': "I love books and hope I can talk with you guys here!",
+    },
+
+    
+     ]
 
     for u in users:
         add_user_profile(u)

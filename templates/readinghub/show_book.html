@@ -11,54 +11,116 @@
         <p class="lead text-muted">Welcome! There is the details of the book! Click to show your like!</p><br/>
       </div>
     </section>
-     <table>
-    <tr>
-    <td>
-     <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"> <img src="{{ MEDIA_URL }}{{ book.image }}" width="300" height="400" alt=""> </div>
-    </td>
-     <td>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     </td>
-    <td>
 
-
-    <section id="about" class="section-padding">
-      <div class="container">
+    <div class="container">
         <div class="row">
+            <div class="col-4 text-center">
+                <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"> <img src="{{ MEDIA_URL }}{{ book.image }}" width="300" height="400" alt=""> </div>
+            </div>
+            <div class="col-8">
+                <section id="about" class="section-padding">
+                      <div class="container">
+                        <div class="row">
 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+                          <div class="col">
+                              <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
 
-                  <p><strong>Description:</strong></p>
-              <p>{{ book.description }}</p>
+                                  <p><strong>Description:</strong></p>
+                              <p style="text-align:justify; text-justify:inter-ideograph;">{{ book.description }}</p>
 
-                <p class="admin-profile">
-                    <span class="pro-title"> <strong>Author:&nbsp;&nbsp; </strong></span> <span class="pro-detail">{{ book.author }}</span>
-                </p>
-                  <p class="admin-profile">
-                      <span class="pro-title"> <strong>URL：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span> <span class="pro-detail"><a href = "{{ book.url }}">{{ book.title }}</a></span>
-                  </p>
-                  <p class="admin-profile">
-                  <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span id="like_count" class="badge badge-danger">{{ book.likes }}</span>
-                  </p>
-              </div>
+                                <p class="admin-profile">
+                                    <span class="pro-title"> <strong>Author:&nbsp;&nbsp; </strong></span> <span class="pro-detail">{{ book.author }}</span>
+                                </p>
+                                  <p class="admin-profile">
+                                      <span class="pro-title"> <strong>URL：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span> <span class="pro-detail"><a href = "{{ book.url }}">{{ book.title }}</a></span>
+                                  </p>
+                                  <p class="admin-profile">
+                                  <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span id="like_count" class="badge badge-danger">{{ book.likes }}</span>
+                                  </p>
+                              </div>
 
-              <div>
-                {% if user.is_authenticated %}
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="likes" data-boookid="{{book.id}}" class="btn btn-danger" type="button">Like it!</button></span>
+                              <div>
+                                {% if user.is_authenticated %}
+                                    <span><br/><button id="likes" data-boookid="{{book.id}}" class="btn btn-danger" type="button">Like it!</button></span>
+                                {% endif %}
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                    </section>
 
 
-                {% endif %}
-              </div>
 
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    </td>
-    </tr>
-    </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#     <table>#}
+{#    <tr>#}
+{#    <td>#}
+{#     <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"> <img src="{{ MEDIA_URL }}{{ book.image }}" width="300" height="400" alt=""> </div>#}
+{#    </td>#}
+{#     <td>#}
+{#         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#}
+{#     </td>#}
+{#    <td>#}
+{##}
+{##}
+{#    <section id="about" class="section-padding">#}
+{#      <div class="container">#}
+{#        <div class="row">#}
+{##}
+{#          <div class="col">#}
+{#              <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">#}
+{##}
+{#                  <p><strong>Description:</strong></p>#}
+{#              <p>{{ book.description }}</p>#}
+{##}
+{#                <p class="admin-profile">#}
+{#                    <span class="pro-title"> <strong>Author:&nbsp;&nbsp; </strong></span> <span class="pro-detail">{{ book.author }}</span>#}
+{#                </p>#}
+{#                  <p class="admin-profile">#}
+{#                      <span class="pro-title"> <strong>URL：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span> <span class="pro-detail"><a href = "{{ book.url }}">{{ book.title }}</a></span>#}
+{#                  </p>#}
+{#                  <p class="admin-profile">#}
+{#                  <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span id="like_count" class="badge badge-danger">{{ book.likes }}</span>#}
+{#                  </p>#}
+{#              </div>#}
+{##}
+{#              <div>#}
+{#                {% if user.is_authenticated %}#}
+{#                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="likes" data-boookid="{{book.id}}" class="btn btn-danger" type="button">Like it!</button></span>#}
+{##}
+{##}
+{#                {% endif %}#}
+{#              </div>#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#    </td>#}
+{#    </tr>#}
+{#    </table>#}
 
 
     <!-- Go to Top Link -->

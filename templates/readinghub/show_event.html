@@ -1,20 +1,20 @@
 {% extends 'readinghub/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
-{{ event.title }}
+{{ events.title }}
 {% endblock %}
 
 {% block body_block %}
 <section class="card-block text-center">
     <div class="container">
-        <h1 class="jumbotron-heading"><strong>{{event.title}}</strong></h1><br/>
+        <h1 class="jumbotron-heading"><strong>{{events.title}}</strong></h1><br/>
         <p class="lead text-muted">Welcome! There is the details of Events! Click to join!</p><br/>
     </div>
 </section>
 <table>
     <tr>
         <td>
-            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"><img src="{{ MEDIA_URL }}{{ event.image }}"
+            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s"><img src="{{ MEDIA_URL }}{{ events.image }}"
                                                                              width="300" height="400" alt=""></div>
         </td>
         <td>
@@ -31,30 +31,30 @@
                             <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
 
                                 <p><strong>Description:</strong></p>
-                                <p>{{ event.description }}</p>
+                                <p>{{ events.description }}</p>
 
                                 <p class="admin-profile">
-                                    <span class="pro-title"> <strong>Book:&nbsp;&nbsp; </strong></span> <span
-                                        class="pro-detail">{{ event.book }}</span>
+                                    <span class="pro-title"> <strong>Book:&nbsp;&nbsp;&nbsp; &nbsp;  </strong></span> <span
+                                        class="pro-detail">{{ events.book }}</span>
 
                                 <p class="admin-profile">
                                     <span class="pro-title"> <strong>Venue:&nbsp;&nbsp; </strong></span> <span
-                                        class="pro-detail">{{ event.venue }}</span>
+                                        class="pro-detail">{{ events.venue }}</span>
                                 </p>
                                 <p class="admin-profile">
-                                    <span class="pro-title"> <strong>Date：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
-                                    <span class="pro-detail"><a href="{{ event.date }}">{{ event.date }}</a></span>
+                                    <span class="pro-title"> <strong>Date：&nbsp;&nbsp;&nbsp;</strong></span>
+                                    <span class="pro-detail"><a href="{{ events.date }}">{{ events.date }}</a></span>
                                 </p>
                                 <p class="admin-profile">
-                                    <span class="pro-title"><strong>Participators：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span>
-                                    <span id="participators_count" class="badge badge-danger">{{ event.participators }}</span>
+                                    <span class="pro-title"><strong>Participators：</strong> </span>
+                                    <span id="participators_count" class="badge badge-primary">{{ events.participators }}</span>
                                 </p>
                             </div>
 
                             <div>
                                 {% if user.is_authenticated %}
 
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-primary" id="join" data-id="{{event.id}}"> Join </button></span>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-primary" id="joins" data-id="{{events.id}}"> Join </button></span>
 
                                 {% endif %}
                             </div>

@@ -139,7 +139,7 @@ def populate():
 
     for e in events:
         add_event(e)
-        print(e.title)
+        print("Adding event")
 
     users = [{
         'username': 'XianyuZhang',
@@ -174,7 +174,7 @@ def populate():
 
     for u in users:
         add_user_profile(u)
-        print(u.username)
+        print("Adding User")
 
 
 def add_book(cat, title, author, url, description, likes=0):
@@ -194,8 +194,7 @@ def add_cat(name):
 
 def add_event(event):
     event_date = datetime.strptime(event['date'] + " " + event['time'], '%Y/%m/%d %H:%M')
-
-    e = Event.objects.get_or_create(title=event["title"], venue=['venue'], date=event_date, time=event['time'], participators=event['participators'], description=event['description'])[0]
+    e = Event.objects.get_or_create(title=event["title"], venue=["venue"], date=event_date, time=event['time'], participators=event['participators'], description=event['description'])[0]
     e.save()
     return e
 

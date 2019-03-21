@@ -19,5 +19,6 @@ urlpatterns = [
     url(r'^profiles/$', views.list_profiles, name='list_profiles'),
     url(r'^show_each_book/$', views.show_each_book, name='show_each_book'),
     url(r'^like/$', views.like_book, name='like_book'),
+    url(r'^join/$', views.join_event, name='join_event'),
 
 ]

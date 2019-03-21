@@ -76,6 +76,7 @@ def show_event(request, event_name_slug):
         context_dict['events'] = events
         context_dict['event_name_slug'] = event_name_slug
     except Event.DoesNotExist:
+        print("0000000")
         context_dict['event'] = None
         context_dict['event_name_slug'] = None
 
@@ -137,6 +138,20 @@ def like_book(request):
                 boook.likes = likes
                 boook.save()
     return HttpResponse(likes)
+
+@login_required
+def join_event(request):
+    eventid = None
+    if request.method == 'GET':
+        eventid = request.GET['event_id']
+        participators = 0
+        if eventid:
+            evvent = Event.objects.get(id=int(eventid))
+            if evvent:
+                participators = evvent.participators + 1
+                evvent.participators = participators
+                evvent.save()
+    return HttpResponse(participators)
 
 
 def register(request):

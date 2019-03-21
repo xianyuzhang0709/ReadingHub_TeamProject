@@ -77,14 +77,3 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-
-# User that joins an event
-# class Participator(models.Model):
-#     event = models.ForeignKey(Event, on_delete=models.CASCADE)
-#     user = models.ForeignKey("UserProfile", blank=True, null=True, on_delete=models.CASCADE)
-#
-#     class Meta:
-#         unique_together = ('event', 'user')
-#
-#     def __str__(self):
-#         return self.user.user.username + " -> " + self.event.title

@@ -31,7 +31,7 @@
 
                                 <p class="admin-profile">
                                     <span class="pro-title"> <strong>Book:&nbsp;&nbsp;&nbsp; &nbsp;  </strong></span> <span
-                                        class="pro-detail">{{ events.book }}</span>
+                                        class="pro-detail">The Lion, the Witch and the Wardrobe</span>
 
                                 <p class="admin-profile">
                                     <span class="pro-title"> <strong>Venue:&nbsp;&nbsp; </strong></span> <span
@@ -51,7 +51,8 @@
                                 {% if user.is_authenticated %}
 
                                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" id="joins" data-evventid="{{events.id}}"> Join it!</button></span>
-
+                                {% else %}
+                                    <span class="text-danger font-italic"><br/>* * * Log in to join * * *</span>
                                 {% endif %}
 
 
@@ -59,9 +60,8 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-
+</div>
 
 
 

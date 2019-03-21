@@ -50,6 +50,10 @@ def show_category(request, category_name_slug):
 
 
 def show_book(request, category_name_slug, book_name_slug):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     context_dict = {}
 
     try:
@@ -59,6 +63,9 @@ def show_book(request, category_name_slug, book_name_slug):
         context_dict['category'] = category
         context_dict['category_name_slug'] = category_name_slug
         context_dict['book_name_slug'] = book_name_slug
+        context_dict['event1'] = event1
+        context_dict['event2'] = event2
+        context_dict['event3'] = event3
     except Category.DoesNotExist or Book.DoesNotExist:
         context_dict['category'] = None
         context_dict['book'] = None
@@ -69,12 +76,19 @@ def show_book(request, category_name_slug, book_name_slug):
 
 
 def show_event(request, event_name_slug):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
     context_dict = {}
 
     try:
         events = Event.objects.get(slug=event_name_slug)
         context_dict['events'] = events
         context_dict['event_name_slug'] = event_name_slug
+        context_dict['event1'] = event1
+        context_dict['event2'] = event2
+        context_dict['event3'] = event3
     except Event.DoesNotExist:
         print("0000000")
         context_dict['event'] = None
@@ -83,9 +97,16 @@ def show_event(request, event_name_slug):
     return render(request, 'readinghub/show_event.html', context_dict)
 
 
+
 def recommend_book(request, category_name_slug):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     try:
         category = Category.objects.get(slug=category_name_slug)
+        
     except Category.DoesNotExist:
         category = None
 
@@ -104,24 +125,45 @@ def recommend_book(request, category_name_slug):
         else:
             print(form.errors)
 
-    context_dict = {'form': form, 'category': category}
+    context_dict = {'form': form, 'category': category,'event1': event1, 'event2': event2,'event3': event3}
     return render(request, 'readinghub/recommend_book.html', context_dict)
 
 
 def all_book(request):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     book_list = Book.objects.order_by('-likes')
-    context_dict = {'books': book_list}
+    context_dict = {'books': book_list,'event1': event1, 'event2': event2,'event3': event3}
     response = render(request, 'readinghub/book.html', context_dict)
     return response
 
 
 def about(request):
-    response = render(request, 'readinghub/about.html')
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
+    context_dict['event1'] = event1
+    context_dict['event2'] = event2
+    context_dict['event3'] = event3
+    response = render(request, 'readinghub/about.html',context_dict)
     return response
 
 
 def show_each_book(request):
-    response = render(request, 'readinghub/show_each_book.html')
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
+    context_dict['event1'] = event1
+    context_dict['event2'] = event2
+    context_dict['event3'] = event3
+    response = render(request, 'readinghub/show_each_book.html',context_dict)
     return response
 
 
@@ -216,6 +258,11 @@ def user_logout(request):
 
 @login_required
 def register_profile(request):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     form = UserProfileForm()
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES)
@@ -227,12 +274,17 @@ def register_profile(request):
             return redirect('index')
         else:
             print(form.errors)
-    context_dict = {'form': form}
+    context_dict = {'form': form,'event1': event1, 'event2': event2,'event3': event3}
     return render(request, 'readinghub/profile_registration.html', context_dict)
 
 
 @login_required
 def profile(request, username):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     try:
         user = User.objects.get(username=username)
     except User.DoesNotExist:
@@ -247,21 +299,30 @@ def profile(request, username):
             return redirect('profile', user.username)
         else:
             print(form.errors)
-    return render(request, 'readinghub/profile.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
+    return render(request, 'readinghub/profile.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form,'event1': event1, 'event2': event2,'event3': event3})
 
 
 @login_required
 def list_profiles(request):
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     userprofile_list = UserProfile.objects.all()
-    return render(request, 'readinghub/list_profiles.html', {'userprofile_list': userprofile_list})
+    return render(request, 'readinghub/list_profiles.html', {'userprofile_list': userprofile_list,'event1': event1, 'event2': event2,'event3': event3})
 
 
 def event(request):
     # Queries the database of a list of all books currently stored.
     # Order the books by number of likes in descending order
-
     event_list = Event.objects.all()
-    context_dict = {'events': event_list}
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
+    event_list = Event.objects.all()
+    context_dict = {'events': event_list,'event1': event1, 'event2': event2,'event3': event3}
     response = render(request, 'readinghub/event.html', context_dict)
     return response
 
@@ -269,9 +330,13 @@ def event(request):
 def book(request):
     # Queries the database of a list of all books currently stored.
     # Order the books by number of likes in descending order
-
+    event_list = Event.objects.all()
+    event1 = event_list[0]
+    event2 = event_list[1]
+    event3 = event_list[2]
+    context_dict = {}
     book_list = Book.objects.order_by('-likes')[:5]
-    context_dict = {'books': book_list}
+    context_dict = {'books': book_list,'event1': event1, 'event2': event2,'event3': event3}
     response = render(request, 'readinghub/book.html', context_dict)
     return response
 

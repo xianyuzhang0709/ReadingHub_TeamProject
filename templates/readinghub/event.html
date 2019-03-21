@@ -26,8 +26,9 @@ Events Page
                             <p style="text-align:justify; text-justify:inter-ideograph;">{{ event.description }}</p>
                             <p><h6>Participators:  <span class="badge badge-pill badge-primary">{{ event.participators }}</span></h6></p>
                             <p><h6>Date: {{ event.date }} </h6> </p>
-                            <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Veiw more &raquo;</button></p>
-
+                             <a href="{% url 'show_event' event.slug %}">
+                                <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Veiw more &raquo;</button></p>
+                              </a>
                         </div><!-- /.col-lg-4 -->
                     {% endfor %}
             </div>

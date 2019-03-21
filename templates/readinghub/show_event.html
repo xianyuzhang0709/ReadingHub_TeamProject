@@ -1,13 +1,13 @@
 {% extends 'readinghub/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
-{{ book.title }}
+{{ event.title }}
 {% endblock %}
 
 {% block body_block %}
 <section class="card-block text-center">
     <div class="container">
-        <h1 class="jumbotron-heading"><strong>{{ event.title }}</strong></h1><br/>
+        <h1 class="jumbotron-heading"><strong>{{event.title}}</strong></h1><br/>
         <p class="lead text-muted">Welcome! There is the details of Events! Click to join!</p><br/>
     </div>
 </section>
@@ -54,7 +54,7 @@
                             <div>
                                 {% if user.is_authenticated %}
 
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<button class="btn btn-outline-primary" id="join" data-id="{{event.id}}"> Join </button></span>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-primary" id="join" data-id="{{event.id}}"> Join </button></span>
 
                                 {% endif %}
                             </div>

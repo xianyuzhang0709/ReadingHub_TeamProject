@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django import forms
 from readinghub.models import Book, Category, UserProfile
+from django.forms.widgets import TextInput
 
 class BookForm(forms.ModelForm):
     title = forms.CharField(max_length=128, help_text="Please enter the title of the book.")

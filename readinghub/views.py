@@ -115,7 +115,6 @@ def like_book(request):
     bookid = None
     if request.method == 'GET':
         bookid = request.GET['book_id']
-        likes = 0
         if bookid:
             boook = Book.objects.get(id=int(bookid))
             if boook:

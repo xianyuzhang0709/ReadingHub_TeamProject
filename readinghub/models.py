@@ -45,7 +45,7 @@ class Book(models.Model):
 
 class Event(models.Model):
     title = models.CharField(max_length=128, unique=True)
-    venue = models.CharField(max_length=128)
+    venue = models.TextField()
     date = models.DateField()
     time = models.TimeField()
     book = models.ForeignKey("Book", blank=True, null=True, on_delete=models.CASCADE)

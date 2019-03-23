@@ -1,7 +1,7 @@
 import os
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'ReadingHub_TeamProject.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE",
+                      "ReadingHub_TeamProject.settings")
 
 import django
 
@@ -112,70 +112,67 @@ def populate():
 
 
     events = [
-                {'title': "Let's enjoy the life! Coming!",
-                  'venue': "603 Great Western Rd, Glasgow G12 8HX",
-                  "date": "2019/01/15",
-                  "time": "18:30",
-                  'book': "Book of a Thousand Days",
-                  'participators': "44",
-                  'description': "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
-                  'image': "e1.jpg"
-                  },
+                {"title": "Let's enjoy the life! Coming!",
+                 "venue": "603 Great Western Rd, Glasgow G12 8HX",
+                 "date": "2019/01/15",
+                 "time": "18:30",
+                 "book": "Book of a Thousand Days",
+                 "participators": "44",
+                 "description": "A person's temperament can see a lot of things, everyone in life, selfishness, kindness, intelligence, self-confidence in their body... can be reflected in many aspects. The book brings people the wisdom of not having the predecessors, there are many, one by one needs their own experience.",
+                 "image": "e1.jpg"},
                 
-                {'title': "Dreams in the book, come, guys!",
-                  'venue': "Millfield, Livingston EH54 7AR",
-                  "date": "2019/02/06",
-                  "time": "9:30",
-                  'book': "The Complete Poems of Emily Dickson",
-                  'participators': "157",
-                  'description': "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
-                  'image': "e2.jpg"
-                  },
+                {"title": "Dreams in the book, come, guys!",
+                 "venue": "Millfield, Livingston EH54 7AR",
+                 "date": "2019/02/06",
+                 "time": "9:30",
+                 "book": "The Complete Poems of Emily Dickson",
+                 "participators": "157",
+                 "description": "The poet is a poem that has been smashed into lines by his own life. In today's era when this poem is obscured, he adheres to his inner ideals and feelings. The distant people think that the poet can't lie, he always shows himself the most realistically.",
+                 "image": "e2.jpg"},
                 
-                {'title': "Come to join us! we need you !",
-                  'venue': "the killingworth centre, Killingworth, Newcastle upon Tyne NE12 6HA",
-                  "date": "2019/03/07",
-                  "time": "19:30",
-                  'book': "The Lion, the Witch and the Wardrobe",
-                  'participators': "66",
-                  'description': "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
-                  'image': "e3.png"
-                  },
+                {"title": "Come to join us! we need you !",
+                 "venue": "the killingworth centre, Killingworth, Newcastle upon Tyne NE12 6HA",
+                 "date": "2019/03/07",
+                 "time": "19:30",
+                 "book": "The Lion, the Witch and the Wardrobe",
+                 "participators": "66",
+                 "description": "You always have to believe that children are more energetic than us and have more wisdom than us. This kind of thinking is the encouragement to the child, but it is also an identity, it will enhance the child's spiritual belonging.",
+                 "image": "e3.png"},
               ]
 
 
     for e in events:
-        add_event(e)
+        add_event(e, e['book'])
         print("Adding event...")
 
     users = [{
-                'username': 'XianyuZhang',
-                'email': 'xianyuzhang@qq.com',
-                'password': 'zxyzxyzxy12',
-                'picture': 'u1.jpeg',
-                'description': "I'm outgoing, come to make friend with me!",
+                "username": "XianyuZhang",
+                "email": "xianyuzhang@qq.com",
+                "password": "zxyzxyzxy12",
+                "picture": "u1.jpeg",
+                "description": "I'm outgoing, come to make friend with me!",
               },
              {
-                'username': 'HaotianWu',
-                'email': 'HaotianWu@qq.com',
-                'password': 'zxyzxyzxy3242',
-                'picture': 'u2.jpeg',
-                'description': "I'm a handsome boy, come, let us talk about life!",
+                "username": "HaotianWu",
+                "email": "HaotianWu@qq.com",
+                "password": "zxyzxyzxy3242",
+                "picture": "u2.jpeg",
+                "description": "Im a handsome boy, come, let us talk about life!",
               },
              {
-                'username': 'ChengXu',
-                'email': 'XuCheng@qq.com',
-                'password': 'zxyzxyzxy32423',
-                'picture': 'u4.jpeg',
-                'description': "we come from different places, but we should be friends with each other!",
+                "username": "ChengXu",
+                "email": "XuCheng@qq.com",
+                "password": "zxyzxyzxy32423",
+                "picture": "u4.jpeg",
+                "description": "we come from different places, but we should be friends with each other!",
               },
 
              {
-                'username': 'AsuquoEffiongGlory',
-                'email': 'AsuquoEffiongGlory@outlook.com',
-                'password': 'zxyzxyzxy32423',
-                'picture': 'u3.jpeg',
-                'description': "I love books and hope I can talk with you guys here!",
+                "username": "AsuquoEffiongGlory",
+                "email": "AsuquoEffiongGlory@outlook.com",
+                "password": "zxyzxyzxy32423",
+                "picture": "u3.jpeg",
+                "description": "I love books and hope I can talk with you guys here!",
              },
      ]
 
@@ -199,11 +196,12 @@ def add_cat(name, image):
     c.save()
     return c
 
-def add_event(event):
-    event_date = datetime.strptime(event['date'] + " " + event['time'], '%Y/%m/%d %H:%M')
-    e = Event.objects.get_or_create(title=event["title"], venue=["venue"], date=event_date,
-                                    time=event['time'], participators=event['participators'],
-                                    description=event['description'], image=event['image'])[0]
+def add_event(event, book):
+    eb = Book.objects.get(title=book)
+    event_date = datetime.strptime(event["date"] + " " + event["time"], "%Y/%m/%d %H:%M")
+    e = Event.objects.get_or_create(title=event["title"], venue=event["venue"], date=event_date,
+                                    time=event["time"], book=eb, participators=event["participators"],
+                                    description=event["description"], image=event["image"])[0]
     e.save()
     return e
 
@@ -217,6 +215,6 @@ def add_user_profile(user):
 
 
 # Execution starts here
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Starting ReadingHub population script...")
     populate()

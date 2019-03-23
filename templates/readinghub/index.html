@@ -1,5 +1,5 @@
 {% extends 'readinghub/base.html' %}
-{% load staticfiles%}
+{% load staticfiles %}
 
 {% block title_block %}
 Home
@@ -58,7 +58,7 @@ Home
 
                             <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>
 
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="text-center"><br/>
@@ -68,7 +68,6 @@ Home
                                         </div>
                                         <div class="modal-body" style="text-align:justify; text-justify:inter-ideograph;">
                                             {{ book.description }}<br/>
-
                                         </div>
                                         <div class="text-center">
                                             <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button><br/><br/>

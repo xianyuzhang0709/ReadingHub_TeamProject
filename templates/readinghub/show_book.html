@@ -37,6 +37,11 @@
                                   <p class="admin-profile">
                                   <span class="pro-title"><strong>Like：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </span> <span id="like_count" class="badge badge-danger">{{ book.likes }}</span>
                                   </p>
+                                  <p class="admin-profile">
+                                    <span class="pro-title"> <strong>Recommender:&nbsp;&nbsp; </strong></span> <span class="pro-detail">
+                                      <a href="{% url 'profile' book.recommender.username %}">{{ book.recommender }}</a>
+                                  </span>
+                                  </p>
                               </div>
 
                               <div>

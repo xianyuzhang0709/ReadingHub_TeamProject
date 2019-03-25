@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body_block %}
-<br/><div style="background-image: url({% static 'images/12.png' %});background-size:100% 100%;">
+<br/><div>{#style="background-image: url({% static 'images/12.png' %});background-size:100% 100%;"#}
     <section class="card-block text-center">
       <div class="container">
         <h1 class="jumbotron-heading"><strong>{{selecteduser.username}}</strong></h1><br/>
@@ -40,6 +40,42 @@
     </div>
 </div>
 
+    <hr class="featurette-divider">
+
+    <section class="card-block text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading"><strong>Recommended Book:</strong></h1><br/>
+      </div>
+    </section>
+
+
+    <ul>
+
+        <div class="row text-center">
+            {% if userbooks %}
+
+                    {% for book in userbooks %}
+                        <div class="col-6 col-md-4 text-center" ><br/>
+                            <div class="teachers-thumbnail">
+                              <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
+                            </div><br/>
+                          <a href="{% url 'show_book' book.category.slug book.slug %}">{{ book.title }}</a><br/>
+                            <p><h6>Category: <a href="{% url 'show_category' book.category.slug %}" aria-pressed="true" >{{ book.category.name }}</a> </h6></p>
+                            <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ book.likes }}</span></h6></p>
+
+                        </div><!-- /.col-lg-4 -->
+                    {% endfor %}
+                    {% else %}
+
+                        **** Didn't recommended any book yet. ****
+
+                    {% endif %}
+
+        </div>
+
+        </ul>
+
+<hr class="featurette-divider">
 
 <div id="edit_profile"></div>
 

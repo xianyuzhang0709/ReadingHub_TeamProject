@@ -43,10 +43,11 @@
               <li {% if request.path == "/readinghub/" %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a></li>
               <li {% if "/event/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'event' %}">Event</a></li>
               <li {% if "/book/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'book' %}">Book</a></li>
+              <li {% if "/profiles/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'list_profiles' %}">Best Readers</a></li>
               <li {% if "/about/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'about' %}">About</a></li>
                 {% if user.is_authenticated %}
               <li {% if "/profile/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'profile' user.username %}">Profile</a></li>
-              <li {% if "/profiles/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'list_profiles' %}">Best Readers</a></li>
+
               <li class="nav-item"><a class="nav-link" href="{% url 'auth_logout' %}?next=/readinghub/">LogOut</a></li>
                 {% else %}
               <li {% if "/login/" in request.path %} class="nav-item active" {% endif %}><a class="nav-link" href="{% url 'auth_login' %}">LogIn</a></li>

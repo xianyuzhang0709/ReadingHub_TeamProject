@@ -72,13 +72,13 @@ def show_event(request, event_name_slug):
 
 
 
-def recommend_book(request, category_name_slug):
+def recommend_book(request, category_name_slug, username):
     try:
         category = Category.objects.get(slug=category_name_slug)
-
+        recommender = User.objects.get(username=username)
     except Category.DoesNotExist:
         category = None
-
+        recommender = None
     form = BookForm_withoutCat()
     if request.method == 'POST':
         form = BookForm_withoutCat(request.POST)
@@ -86,6 +86,7 @@ def recommend_book(request, category_name_slug):
             if category:
                 newbook = form.save(commit=False)
                 newbook.category = category
+                newbook.recommender = recommender
                 if 'image' in request.FILES:
                     newbook.image = request.FILES['image']
                 newbook.save()
@@ -97,17 +98,22 @@ def recommend_book(request, category_name_slug):
     return render(request, 'readinghub/recommend_book.html', context_dict)
 
 
-def recommend_a_book(request):
+def recommend_a_book(request, username):
+    try:
+        recommender = User.objects.get(username=username)
+    except:
+        recommender = None
     form = BookForm()
     if request.method == 'POST':
         form = BookForm(request.POST)
         if form.is_valid():
             newbook = form.save(commit=False)
-            category = newbook.category.slug
+            newbook.recommender = recommender
+            category_name_slug = newbook.category.slug
             if 'image' in request.FILES:
                 newbook.image = request.FILES['image']
             newbook.save()
-            return show_category(request, category)
+            return show_category(request, category_name_slug)
         else:
             print(form.errors)
 
@@ -234,13 +240,17 @@ def register_profile(request):
     return render(request, 'readinghub/profile_registration.html', context_dict)
 
 # show profile page for every user
-@login_required
 def profile(request, username):
     try:
         user = User.objects.get(username=username)
     except User.DoesNotExist:
         return redirect('index')
     userprofile = UserProfile.objects.get_or_create(user=user)[0]
+    try:
+        userbooks = Book.objects.filter(recommender=user)
+    except Book.DoesNotExist:
+        userbooks = None
+
     form = UserProfileForm(
         {'picture': userprofile.picture, 'description': userprofile.description})
     if request.method == 'POST':
@@ -250,10 +260,10 @@ def profile(request, username):
             return redirect('profile', user.username)
         else:
             print(form.errors)
-    return render(request, 'readinghub/profile.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
+    return render(request, 'readinghub/profile.html', {'userprofile': userprofile,
+                                                       'selecteduser': user, 'form': form, 'userbooks': userbooks})
 
 # Best Reader
-@login_required
 def list_profiles(request):
     userprofile_list = UserProfile.objects.all()
     return render(request, 'readinghub/list_profiles.html', {'userprofile_list': userprofile_list})

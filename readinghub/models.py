@@ -29,6 +29,7 @@ class Book(models.Model):
     likes = models.IntegerField(default=0)
     image = models.ImageField(default='lion.jpg', upload_to='book_images', blank=True)
     slug = models.SlugField(unique=True)
+    recommender = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
     # reviews = models.ForeignKey(Reviews)
 

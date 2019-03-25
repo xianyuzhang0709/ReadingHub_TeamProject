@@ -12,6 +12,7 @@ class BookForm_withoutCat(forms.ModelForm):
     description = forms.CharField(widget=forms.Textarea, help_text="Please description this book.")
     image = forms.ImageField(required=False, help_text="Upload a picture of the book.")
     slug = forms.CharField(widget=forms.HiddenInput(), required=False)
+    # recommender = form.ModelChoiceField(queryset=User.objects.all(), widget=forms.HiddenInput())
 
     def clean(self):
         cleaned_data = self.cleaned_data
@@ -25,7 +26,7 @@ class BookForm_withoutCat(forms.ModelForm):
 
     class Meta:
         model = Book
-        exclude = ('category',)
+        exclude = ('category', 'recommender')
 
 
 
@@ -34,7 +35,7 @@ class BookForm(BookForm_withoutCat):
                                       help_text="Please choose an Category for your book.")
     class Meta:
         model = Book
-        exclude = ()
+        exclude = ('recommender', )
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)

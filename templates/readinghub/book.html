@@ -14,8 +14,7 @@ Home
             <p>
                 {% if user.is_authenticated %}
 
-                       <a class="btn btn-outline-primary btn-lg" href="/readinghub/recommend_a_book/" role="button">Recommend a new book</a>
-
+                       <a class="btn btn-outline-primary btn-lg" href="{% url 'recommend_a_book' user.username %}" role="button">Recommend a new book</a>
                 {% endif %}
             </p>
           </div>
@@ -29,8 +28,9 @@ Home
                               <img width="255" height="380" alt="{{book.title}}" src="{{ MEDIA_URL }}{{ book.image }}" data-holder-rendered="true">
                             </div><br/>
                           <a href="{% url 'show_book' book.category.slug book.slug %}">{{ book.title }}</a><br/>
-                            <p><h6>Category: {{ book.category }} </h6></p>
+                            <p><h6>Category: <a href="{% url 'show_category' book.category.slug %}" aria-pressed="true" >{{ book.category.name }}</a> </h6></p>
                             <p><h6>Like:  <span class="badge badge-pill badge-danger">{{ book.likes }}</span></h6></p>
+
 
 
                             <p><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Description &raquo;</button></p>

@@ -3,7 +3,8 @@ from django import forms
 from readinghub.models import Book, Category, UserProfile
 from django.forms.widgets import TextInput
 
-class BookForm(forms.ModelForm):
+class BookForm_withoutCat(forms.ModelForm):
+
     title = forms.CharField(max_length=128, help_text="Please enter the title of the book.")
     author = forms.CharField(max_length=128, help_text="Please enter the author's name of the book.")
     url = forms.URLField(max_length=200, help_text="Please enter the URL of the book.")
@@ -16,8 +17,8 @@ class BookForm(forms.ModelForm):
         cleaned_data = self.cleaned_data
         url = cleaned_data.get('url')
 
-        if url and not url.startswith('http://'):
-            url = 'http://' + url
+        if url and not url.startswith('http://' or 'https://'):
+            url = 'https://' + url
             cleaned_data['url'] = url
 
             return cleaned_data
@@ -25,6 +26,15 @@ class BookForm(forms.ModelForm):
     class Meta:
         model = Book
         exclude = ('category',)
+
+
+
+class BookForm(BookForm_withoutCat):
+    category = forms.ModelChoiceField(queryset=Category.objects.all(),
+                                      help_text="Please choose an Category for your book.")
+    class Meta:
+        model = Book
+        exclude = ()
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)

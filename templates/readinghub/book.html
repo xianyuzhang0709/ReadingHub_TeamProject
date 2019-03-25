@@ -6,7 +6,20 @@ Home
 {% endblock %}
 
 {% block body_block %}
+
         <ul>
+        <section class="card-block text-center">
+          <div class="container">
+            <p class="text text-muted">Click here to recommend a book for your friends.</p>
+            <p>
+                {% if user.is_authenticated %}
+
+                       <a class="btn btn-outline-primary btn-lg" href="/readinghub/recommend_a_book/" role="button">Recommend a new book</a>
+
+                {% endif %}
+            </p>
+          </div>
+        </section>
         <div class="row">
             {% if books %}
 

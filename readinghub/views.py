@@ -3,7 +3,7 @@ from readinghub.models import Category, Book, Event, UserProfile
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
-from .forms import UserForm, UserProfileForm, BookForm
+from .forms import UserForm, UserProfileForm, BookForm, BookForm_withoutCat
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from datetime import datetime
@@ -75,20 +75,19 @@ def show_event(request, event_name_slug):
 def recommend_book(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
-        
+
     except Category.DoesNotExist:
         category = None
 
-    form = BookForm()
+    form = BookForm_withoutCat()
     if request.method == 'POST':
-        form = BookForm(request.POST)
+        form = BookForm_withoutCat(request.POST)
         if form.is_valid():
             if category:
                 newbook = form.save(commit=False)
                 newbook.category = category
                 if 'image' in request.FILES:
                     newbook.image = request.FILES['image']
-
                 newbook.save()
             return show_category(request, category_name_slug)
         else:
@@ -96,6 +95,25 @@ def recommend_book(request, category_name_slug):
 
     context_dict = {'form': form, 'category': category}
     return render(request, 'readinghub/recommend_book.html', context_dict)
+
+
+def recommend_a_book(request):
+    form = BookForm()
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            newbook = form.save(commit=False)
+            category = newbook.category.slug
+            if 'image' in request.FILES:
+                newbook.image = request.FILES['image']
+            newbook.save()
+            return show_category(request, category)
+        else:
+            print(form.errors)
+
+    context_dict = {'form': form}
+    return render(request, 'readinghub/recommend_a_book.html', context_dict)
+
 
 # Book list for Book.html
 def all_book(request):

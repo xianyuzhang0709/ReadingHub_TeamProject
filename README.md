@@ -45,3 +45,6 @@
 
 ![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/best2.png)<br>
 ![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/best3.jpeg)
+
+* :fire: Here is a **video** for this web application!<br>
+[Presentation Video](https://youtu.be/NXFdqh3Qg6E)

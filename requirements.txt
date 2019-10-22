@@ -2,5 +2,5 @@ certifi==2019.3.9
 Django==1.11.22
 django-bootstrap-toolkit==2.15.0
 django-registration-redux==1.4
-Pillow==5.4.1
+Pillow==6.2.0
 pytz==2018.9

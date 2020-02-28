@@ -29,7 +29,10 @@ python manage.py runserver
 
 ![img](Slide&ScreenShot/joinEvent.png)
 
-## A video for Readinghub:
+## A presentation video for Readinghub:
 
-:fire: Here is a **video** for this web application!<br>
-[Presentation Video](https://youtu.be/NXFdqh3Qg6E)
+ [Presentation Video](https://youtu.be/NXFdqh3Qg6E)
+
+## Notes and upgrated logs:
+
+ [notes](notes.md)

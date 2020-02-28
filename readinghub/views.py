@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from .forms import UserForm, UserProfileForm, BookForm, BookForm_withoutCat
 from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
+from django.urls import reverse
 from datetime import datetime
 from django.contrib.auth.models import User
 

@@ -16,24 +16,18 @@ python manage.py runserver
 ```
 
 ## Some ScreenShot For Readinghub:
-:fire: **Description for each Book:**<br>
 
-![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/i2.jpeg)
-<br><br>
+**Category**: where you can have a overview of the books on our websites.
 
-:fire:**Like a Book** or **Join an Event:**  You shold have :dizzy:**Logged in!**<br>
+![img](Slide&ScreenShot/category.png)
 
-![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/b1.jpeg)
-<br><br>
+**Book**: in each category page, you can see the descriptions of each books. Click the name or the image of the books, the you will be redirected to the detailed page of the book, all information of it is in front of you.
 
-:fire:**Most popular Event:** Which one is your fav?<br>
+![img](Slide&ScreenShot/books.png)
 
-![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/enew.jpeg)
-<br><br>
-:fire:**Best Readers:** Can you find yourself? :blush:<br>
+**Event**: in front of the home page, there are at least three latest events are shown like a slide. Click one which you are interested in, you will see all information of the event and you can decide if you wanna join it. Precondition is that you are already registered.
 
-![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/best2.png)<br>
-![image](https://github.com/xianyuzhang0709/ReadingHub_TeamProject/blob/master/EPreSlideScreenShot/best3.jpeg)
+![img](Slide&ScreenShot/joinEvent.png)
 
 ## A video for Readinghub:
 

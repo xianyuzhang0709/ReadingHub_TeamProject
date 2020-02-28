@@ -68,7 +68,7 @@ class Event(models.Model):
 # Users registered in our website
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User Model instance.
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     # The additional attributes we wish to include.
     picture = models.ImageField(default='lion.jpg', upload_to='profile_images', blank=True)
